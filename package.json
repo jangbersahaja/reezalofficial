@@ -1,7 +1,7 @@
 {
     "name": "reezalofficial",
     "version": "0.1.0",
-    "hompage": "https://jangbersahaja.github.io/reezalofficial",
+    "homepage": "https://jangbersahaja.github.io/reezalofficial",
     "private": true,
     "dependencies": {
         "@material-ui/core": "^4.12.3",
