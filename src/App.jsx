@@ -9,7 +9,7 @@ import KepalaBatas from "./pages/KepalaBatas";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL} >
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/blog" component={Blog} />
