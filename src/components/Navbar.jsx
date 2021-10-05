@@ -120,7 +120,7 @@ const Navbar = () => {
         <Logo href="">
           <LogoImg src={jata} />
           <LogoNameWrapper>
-            <LogoName>Reezal Nerican</LogoName>
+            <LogoName>Reezal Merican</LogoName>
             <LogoTitle>
               Minister of Housing and Local Government Malaysia
             </LogoTitle>
