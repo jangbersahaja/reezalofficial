@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/reezalofficial/static/js/main.de8620f9.chunk.js",
-    "main.js.map": "/reezalofficial/static/js/main.de8620f9.chunk.js.map",
+    "main.js": "/reezalofficial/static/js/main.f0981074.chunk.js",
+    "main.js.map": "/reezalofficial/static/js/main.f0981074.chunk.js.map",
     "runtime-main.js": "/reezalofficial/static/js/runtime-main.6d3656a6.js",
     "runtime-main.js.map": "/reezalofficial/static/js/runtime-main.6d3656a6.js.map",
-    "static/js/2.5b3a89f8.chunk.js": "/reezalofficial/static/js/2.5b3a89f8.chunk.js",
-    "static/js/2.5b3a89f8.chunk.js.map": "/reezalofficial/static/js/2.5b3a89f8.chunk.js.map",
+    "static/js/2.c93921fd.chunk.js": "/reezalofficial/static/js/2.c93921fd.chunk.js",
+    "static/js/2.c93921fd.chunk.js.map": "/reezalofficial/static/js/2.c93921fd.chunk.js.map",
     "index.html": "/reezalofficial/index.html",
-    "static/js/2.5b3a89f8.chunk.js.LICENSE.txt": "/reezalofficial/static/js/2.5b3a89f8.chunk.js.LICENSE.txt",
+    "static/js/2.c93921fd.chunk.js.LICENSE.txt": "/reezalofficial/static/js/2.c93921fd.chunk.js.LICENSE.txt",
     "static/media/about1.0c78c016.jpg": "/reezalofficial/static/media/about1.0c78c016.jpg",
     "static/media/about2.e4718a32.jpg": "/reezalofficial/static/media/about2.e4718a32.jpg",
     "static/media/about3.88428f3b.jpg": "/reezalofficial/static/media/about3.88428f3b.jpg",
@@ -23,7 +23,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.6d3656a6.js",
-    "static/js/2.5b3a89f8.chunk.js",
-    "static/js/main.de8620f9.chunk.js"
+    "static/js/2.c93921fd.chunk.js",
+    "static/js/main.f0981074.chunk.js"
   ]
 }
