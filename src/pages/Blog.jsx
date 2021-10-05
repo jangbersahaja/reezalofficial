@@ -4,10 +4,10 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
 import BlogHero from "../img/blog-hero.jpg";
-import Post1 from "../img/homepage/article1.jpg";
-import Post2 from "../img/homepage/article2.jpg";
-import Post3 from "../img/homepage/article3.jpg";
-import Posting from "../components/article/article.json";
+import PostImg1 from "../img/homepage/article1.jpg";
+import PostImg2 from "../img/homepage/article-pm.jpg";
+import PostImg3 from "../img/homepage/article3.jpg";
+import PostImg4 from "../img/homepage/article4.jpg";
 
 const Container = styled.div`
   background-color: #2c4964;
@@ -131,9 +131,16 @@ const Title = styled.h2`
 
 const Desc = styled.p`
   text-align: justify;
-
   white-space: pre-line;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 `;
+
+
 
 function Blog() {
   return (
@@ -147,55 +154,78 @@ function Blog() {
         </Hero>
         <Wrapper>
           <Posts>
-            <Link to="/preview/post">
+          <Link to="/post4">
               <Post>
                 <ImgWrapper>
-                  <Image src={Post1} />
+                  <Image src={PostImg4} />
+                </ImgWrapper>
+                <TextWrapper>
+                  <Category>Statement</Category>
+                  <Date>30 Sep 2021</Date>
+                  <Title>
+                    KPKT akan membawa agenda Liveable Malaysia atau Malaysia Berdaya Huni sebagai Fokus Utama
+                  </Title>
+                  <Desc>
+                  Pembentangan Rancangan Malaysia Kedua Belas (RMKe-12) oleh YAB Perdana Menteri pada Isnin lalu merupakan satu hala tuju nasional yang komprehensif sehingga 2025. Saya meneliti satu persatu apa yang dibentangkan dan ia sememangnya menuntut collective responsibility daripada semua pihak — Anggota Pentadbiran, penjawat awam, pemimpin masyarakat, pemain industri, komuniti setempat, organisasi sivil hinggalah ke unit terkecil, setiap seorang rakyat dan Keluarga Malaysia. 
+                  </Desc>
+                </TextWrapper>
+              </Post>
+            </Link>
+            <Link to="/post2">
+              <Post>
+                <ImgWrapper>
+                  <Image src={PostImg2} />
+                </ImgWrapper>
+                <TextWrapper>
+                  <Category>Though</Category>
+                  <Date>25 Sep 2021</Date>
+                  <Title>
+                  Terima Kasih Yab PM. Pengecualian Sewa 6 Bulan Kepada Penerima Manfaat 2,000 Unit Rumah Ikram Keluarga Malaysia
+                  </Title>
+                  <Desc>
+                  Alhamdulillah, semalam telah berlangsung Majlis Pelancaran
+                  Rumah IKRAM Keluarga Malaysia yang disempurnakan oleh YAB
+                  Dato’ Sri Ismail Sabri Yaakob, Perdana Menteri di Dewan
+                  Kristal KPKT.{"\n"}
+                  {"\n"}
+                  </Desc>
+                </TextWrapper>
+              </Post>
+            </Link>
+            <Link to="/post">
+              <Post>
+                <ImgWrapper>
+                  <Image src={PostImg1} />
                 </ImgWrapper>
                 <TextWrapper>
                   <Category>Though</Category>
                   <Date>15 Sep 2021</Date>
-
-                  {Posting.map((post) => {
-                    return (
-                      <>
-                        <Title>{post.title}</Title>
-                        <Desc>{post.text}</Desc>
-                      </>
-                    );
-                  })}
-                </TextWrapper>
-              </Post>
-            </Link>
-            <Link to="/preview/post">
-              <Post>
-                <ImgWrapper>
-                  <Image src={Post2} />
-                </ImgWrapper>
-                <TextWrapper>
-                  <Category>Statement</Category>
-                  <Date>7 Sep 2021</Date>
                   <Title>
                     Merawat Keresahan Rakyat Dalam Keadaan Kita Berhadapan
                     Dengan Kesan Pasca Pandemik COVID-19
                   </Title>
                   <Desc>
-                    Seperti mana yang saya maklumkan semasa PC saya di KPKT
-                    tempoh hari, satu daripada area of interest yang saya
-                    tetapkan adalah untuk merawat keresahan rakyat dalam keadaan
-                    kita berhadapan dengan kesan pasca pandemik COVID-19.
+                    Dalam merawat keresahan itu juga, saya tekankan bahawa kita
+                    mahu bina keyakinan rakyat dan kita mahu rakyat rasa
+                    selamat. They must feel safe.
+                    {"\n"} {"\n"}
+                    Kerana pada ketika ini, rakyat mahu lihat action and
+                    results. Apa tindakan kita dan apa hasilnya. {"\n"} {"\n"}Ini semua
+                    merupakan sebahagian daripada prime agenda atau agenda utama
+                    saya serta pasukan KPKT iaitu{" "}
                   </Desc>
                 </TextWrapper>
               </Post>
             </Link>
-            <Link to="/preview/post">
+            
+            <Link to="/post3">
               <Post>
                 <ImgWrapper>
-                  <Image src={Post3} />
+                  <Image src={PostImg3} />
                 </ImgWrapper>
                 <TextWrapper>
                   <Category>In The News</Category>
-                  <Date>26 Sep 2021</Date>
+                  <Date>26 Aug 2021</Date>
                   <Title>
                     Menerapkan Konsep Keluarga Dalam Politik, Perangi Pandemik
                   </Title>

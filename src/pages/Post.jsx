@@ -2,7 +2,9 @@ import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
-import Post1 from "../img/homepage/article1.jpg";
+import PostImg from "../img/homepage/article1.jpg";
+import { Link } from "react-router-dom";
+import {ArrowBack} from '@material-ui/icons';
 
 const Container = styled.div`
   background-color: #2c4964;
@@ -18,7 +20,7 @@ const Hero = styled.div`
       rgba(44, 73, 100, 1),
       rgba(255, 255, 255, 0.3)
     ),
-    url(${Post1}) center center;
+    url(${PostImg}) center center;
   background-size: cover;
   height: 100vh;
   color: #fff;
@@ -60,7 +62,7 @@ const SectionTitle = styled.h2`
   width: 1064px;
   max-width: 100%;
   margin: 0 auto;
-  
+
   font-family: "Playfair Display", serif;
   font-size: 28px;
   font-weight: bold;
@@ -121,11 +123,34 @@ const Desc = styled.p`
   margin: 30px 0;
 `;
 
+const BackBtn = styled(Link)`
+  position: fixed;
+  top: 15vh;
+  left: 5vh;
+  z-index: 99;
+  background: #d43076;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ArrowBackBtn = styled(ArrowBack)`
+color: #fff;
+`;
+
 function Post() {
   return (
     <div>
       <Navbar />
       <Container>
+        <BackBtn to = "/blog">
+          <ArrowBackBtn />
+        </BackBtn>
         <Hero>
           <TitleWrapper>
             <SectionTitle>
@@ -146,9 +171,9 @@ function Post() {
                   They must feel safe.
                   {"\n"} {"\n"}
                   Kerana pada ketika ini, rakyat mahu lihat action and results.
-                  Apa tindakan kita dan apa hasilnya. Ini semua merupakan
-                  sebahagian daripada prime agenda atau agenda utama saya serta
-                  pasukan KPKT iaitu{" "}
+                  Apa tindakan kita dan apa hasilnya. {"\n"} {"\n"}Ini semua
+                  merupakan sebahagian daripada prime agenda atau agenda utama
+                  saya serta pasukan KPKT iaitu{" "}
                   <strong>&ldquo;LIVEABLE MALAYSIA&rdquo;</strong> atau{" "}
                   <strong>&ldquo;MALAYSIA BERDAYA HUNI&rdquo;.</strong>
                   {"\n"} {"\n"}

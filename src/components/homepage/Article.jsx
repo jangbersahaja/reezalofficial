@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Liveable from "../../img/homepage/liveable2.jpg";
 
@@ -103,19 +104,26 @@ const PostText = styled.p`
   white-space: pre-line;
 `;
 
-const ReadMore = styled.button`
+const ReadMore = styled(Link)`
+  text-align: center;
+  font-size: 14px;
+
   background-color: #fff;
   transition: all 0.3s ease-in;
   border: 2px solid #d43076;
   margin-top: 30px;
   padding: 10px 20px;
+  cursor: pointer;
   &:hover {
     background-color: #d43076;
     color: white;
   }
 `;
 
-const MoreArticle = styled.button`
+const MoreArticle = styled(Link)`
+  text-align: center;
+  font-size: 14px;
+
   background-color: #d43076;
   color: white;
   transition: all 0.3s ease-in;
@@ -123,7 +131,7 @@ const MoreArticle = styled.button`
   margin-top: 10px;
   padding: 10px 20px;
   &:hover {
-    background-color: #dd1c70;
+    background-color: #b32160;
   }
 `;
 
@@ -151,8 +159,8 @@ const Article = () => {
                 vero dolorum inventore vitae expedita quasi adipisci eum quidem
                 possimus earum.
               </PostText>
-              <ReadMore>Read This Article</ReadMore>
-              <MoreArticle>More Article</MoreArticle>
+              <ReadMore to = "">Read This Article</ReadMore>
+              <MoreArticle to="/blog">More Article</MoreArticle>
             </Desc>
           </Text>
         </Post>
