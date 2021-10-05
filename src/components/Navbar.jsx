@@ -116,7 +116,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
-      <Link to="/preview">
+      <Link to="/">
         <Logo href="">
           <LogoImg src={jata} />
           <LogoNameWrapper>
@@ -134,12 +134,12 @@ const Navbar = () => {
         <span />
       </Hamburger>
       <Menu isOpen={isOpen}>
-        <MenuLink to="/preview">Home</MenuLink>
-        <MenuLink to="/preview/blog">Blog</MenuLink>
-        <MenuLink to="/preview/kepalabatas">Kepala Batas</MenuLink>
+        <MenuLink to="/">Home</MenuLink>
+        <MenuLink to="/blog">Blog</MenuLink>
+        <MenuLink to="/kepalabatas">Kepala Batas</MenuLink>
         <MenuLink to="#">Media</MenuLink>
-        <MenuLink to="/preview/about">About</MenuLink>
-        <Contact to="/preview/contact">Contact</Contact>
+        <MenuLink to="/about">About</MenuLink>
+        <Contact to="/contact">Contact</Contact>
       </Menu>
     </Nav>
   );

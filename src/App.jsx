@@ -11,12 +11,12 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/preview" component={Home} exact />
-        <Route path="/preview/blog" component={Blog} />
-        <Route path="/preview/post" component={Post} />
-        <Route path="/preview/about" component={About} />
-        <Route path="/preview/contact" component={ContactMe} />  
-        <Route path="/preview/kepalabatas" component={KepalaBatas} />   
+        <Route path="/" component={Home} exact />
+        <Route path="/blog" component={Blog} />
+        <Route path="/post" component={Post} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={ContactMe} />  
+        <Route path="/kepalabatas" component={KepalaBatas} />   
       </Switch>
     </BrowserRouter>
   );
