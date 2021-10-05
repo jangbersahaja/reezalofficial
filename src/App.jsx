@@ -3,11 +3,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Blog from "./pages/Blog";
 import Home from "./pages/Home";
 import Post from "./pages/Post";
-
 import Post2 from "./pages/Post2";
-
 import Post3 from "./pages/Post3";
-
 import Post4 from "./pages/Post4";
 import About from "./pages/About";
 import ContactMe from "./pages/ContactMe";
@@ -28,7 +25,7 @@ const App = () => {
         <Route path="/about" component={About} />
         <Route path="/contact" component={ContactMe} />
         <Route path="/kepalabatas" component={KepalaBatas} />
-      </Switch>
+      </Switch> 
     </BrowserRouter>
   );
 };

@@ -30,7 +30,6 @@ const SectionTitle = styled.h1`
   margin-bottom: 30px;
   color: #37517e;
   text-align: center;
-
   border-bottom: 7px solid #d43076;
 `;
 
@@ -45,7 +44,7 @@ const AboutPost = styled.div`
   height: 450px;
   @media (max-width: 960px) {
     flex-direction: column;
-    min-height: 90vh;
+    min-height: 110vh;
   }
   @media (max-width: 768px) {
     padding: 20px;
