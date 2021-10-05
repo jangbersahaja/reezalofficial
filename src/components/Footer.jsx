@@ -1,0 +1,83 @@
+import { Facebook, Instagram, Twitter } from "@material-ui/icons";
+import React from "react";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  padding: 0 5%;
+  background-color: #2c4964;
+  display: flex;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
+`;
+
+const Left = styled.div`
+  flex: 1;
+  display: flex;
+  padding: 20px;
+
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
+`;
+
+const SocialMedia = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
+const SocMedIcon = styled.div`
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+`;
+
+const Right = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
+`;
+
+const CopyrightText = styled.span`
+color: #fff;
+text-align: center;
+`;
+
+const Footer = () => {
+  return (
+    <Wrapper>
+      <Left>
+        <SocialMedia>
+          <SocMedIcon>
+            <Facebook />
+          </SocMedIcon>
+          <SocMedIcon>
+            <Instagram />
+          </SocMedIcon>
+          <SocMedIcon>
+            <Twitter />
+          </SocMedIcon>
+        </SocialMedia>
+      </Left>
+      <Right>
+          <CopyrightText>
+          &copy; Copyright <strong >Reezal Merican. </strong> All Rights Reserved
+          </CopyrightText>
+      </Right>
+    </Wrapper>
+  );
+};
+
+export default Footer;
