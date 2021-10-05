@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.js": "/reezalofficial/static/js/main.70ae3400.chunk.js",
-    "main.js.map": "/reezalofficial/static/js/main.70ae3400.chunk.js.map",
-    "runtime-main.js": "/reezalofficial/static/js/runtime-main.6d3656a6.js",
-    "runtime-main.js.map": "/reezalofficial/static/js/runtime-main.6d3656a6.js.map",
-    "static/js/2.5b3a89f8.chunk.js": "/reezalofficial/static/js/2.5b3a89f8.chunk.js",
-    "static/js/2.5b3a89f8.chunk.js.map": "/reezalofficial/static/js/2.5b3a89f8.chunk.js.map",
-    "index.html": "/reezalofficial/index.html",
-    "static/js/2.5b3a89f8.chunk.js.LICENSE.txt": "/reezalofficial/static/js/2.5b3a89f8.chunk.js.LICENSE.txt",
-    "static/media/about1.0c78c016.jpg": "/reezalofficial/static/media/about1.0c78c016.jpg",
-    "static/media/about2.e4718a32.jpg": "/reezalofficial/static/media/about2.e4718a32.jpg",
-    "static/media/about3.88428f3b.jpg": "/reezalofficial/static/media/about3.88428f3b.jpg",
-    "static/media/article1.55adea4c.jpg": "/reezalofficial/static/media/article1.55adea4c.jpg",
-    "static/media/article2.4a3a8518.jpg": "/reezalofficial/static/media/article2.4a3a8518.jpg",
-    "static/media/article3.25deefd8.jpg": "/reezalofficial/static/media/article3.25deefd8.jpg",
-    "static/media/blog-hero.665c8187.jpg": "/reezalofficial/static/media/blog-hero.665c8187.jpg",
-    "static/media/hero-bg.d9923324.jpg": "/reezalofficial/static/media/hero-bg.d9923324.jpg",
-    "static/media/kepalabatas-bg.11d4adc5.jpg": "/reezalofficial/static/media/kepalabatas-bg.11d4adc5.jpg",
-    "static/media/liveable2.54bf98b1.jpg": "/reezalofficial/static/media/liveable2.54bf98b1.jpg",
-    "static/media/logo.aa80238b.png": "/reezalofficial/static/media/logo.aa80238b.png",
-    "static/media/profile.4fca1ca0.png": "/reezalofficial/static/media/profile.4fca1ca0.png"
+    "main.js": "/static/js/main.d5cfc28a.chunk.js",
+    "main.js.map": "/static/js/main.d5cfc28a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3c54edfb.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3c54edfb.js.map",
+    "static/js/2.29d2b4a0.chunk.js": "/static/js/2.29d2b4a0.chunk.js",
+    "static/js/2.29d2b4a0.chunk.js.map": "/static/js/2.29d2b4a0.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.29d2b4a0.chunk.js.LICENSE.txt": "/static/js/2.29d2b4a0.chunk.js.LICENSE.txt",
+    "static/media/about1.0c78c016.jpg": "/static/media/about1.0c78c016.jpg",
+    "static/media/about2.e4718a32.jpg": "/static/media/about2.e4718a32.jpg",
+    "static/media/about3.88428f3b.jpg": "/static/media/about3.88428f3b.jpg",
+    "static/media/article1.55adea4c.jpg": "/static/media/article1.55adea4c.jpg",
+    "static/media/article2.4a3a8518.jpg": "/static/media/article2.4a3a8518.jpg",
+    "static/media/article3.25deefd8.jpg": "/static/media/article3.25deefd8.jpg",
+    "static/media/blog-hero.665c8187.jpg": "/static/media/blog-hero.665c8187.jpg",
+    "static/media/hero-bg.d9923324.jpg": "/static/media/hero-bg.d9923324.jpg",
+    "static/media/kepalabatas-bg.11d4adc5.jpg": "/static/media/kepalabatas-bg.11d4adc5.jpg",
+    "static/media/liveable2.54bf98b1.jpg": "/static/media/liveable2.54bf98b1.jpg",
+    "static/media/logo.aa80238b.png": "/static/media/logo.aa80238b.png",
+    "static/media/profile.4fca1ca0.png": "/static/media/profile.4fca1ca0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6d3656a6.js",
-    "static/js/2.5b3a89f8.chunk.js",
-    "static/js/main.70ae3400.chunk.js"
+    "static/js/runtime-main.3c54edfb.js",
+    "static/js/2.29d2b4a0.chunk.js",
+    "static/js/main.d5cfc28a.chunk.js"
   ]
 }
