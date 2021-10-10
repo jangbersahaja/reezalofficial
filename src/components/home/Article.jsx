@@ -30,10 +30,14 @@ const SectionTitle = styled.h1`
   font-weight: bold;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin: 50px 0;
   color: #37517e;
   text-align: center;
   border-bottom: 7px solid #d43076;
+
+  @media (max-width: 768px) {
+    font-size: 48px;
+  }
 `;
 
 const Post = styled.div`

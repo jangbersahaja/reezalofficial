@@ -30,9 +30,13 @@ const SectionTitle = styled.h1`
   font-weight: bold;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin: 50px 0;
   color: #fff;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 48px;
+  }
 `;
 
 const Hero = () => {

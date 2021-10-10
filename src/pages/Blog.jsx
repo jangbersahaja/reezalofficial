@@ -79,7 +79,7 @@ const Post = styled.div`
 
   @media (max-width: 992px) {
     flex-direction: column;
-    min-height: 700px;
+    min-height: 300px;
   }
 `;
 
@@ -89,52 +89,76 @@ const ImgWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  height: 350px;
+  height: 250px;
   width: 100%;
   object-fit: cover;
+  @media (max-width: 992px) {
+    min-height: 320px;
+    flex: auto;
+  }
 `;
 
 const TextWrapper = styled.div`
   flex: 3;
-  padding: 30px;
+  padding: 20px;
   overflow: hidden;
 
   @media (max-width: 992px) {
-    min-height: 200px;
+    min-height: 100px;
     flex: auto;
   }
+`;
+
+const Detail = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 `;
 
 const Category = styled.a`
   font-size: 12px;
   font-weight: bold;
-
-  width: 100px;
+  text-align: center;
   padding: 5px 10px;
-  margin-right: 30px;
-
-  border: 2px solid #2c4964;
-  border-radius: 20px;
+  color: #fff;
+  background-color: #2c4964;
+  margin: auto 0;
 `;
 
 const Date = styled.span`
   font-size: 12px;
   font-weight: bold;
+  margin: auto 0;
 `;
 
 const Title = styled.h2`
-  margin: 20px 0;
+  margin: 5px 0;
+  font-size: 22px;
+  font-family: "Playfair Display", serif;
 `;
 
 const Desc = styled.p`
   text-align: justify;
   white-space: pre-line;
 
+  font-weight: 100;
+
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const LineBreak = styled.hr`
+  margin: 5px 0;
+  border: 0;
+  height: 0;
+  border-top: 0.8px solid rgba(0, 0, 0, 0.1);
 `;
 
 function Blog() {
@@ -149,26 +173,22 @@ function Blog() {
         </Hero>
         <Wrapper>
           <Posts>
-            {
-            Articles.reverse().map((p) => {
+            {Articles.reverse().map((p) => {
               return (
-                <Link to = {`/post/${p.id}`}  >
+                <Link to={`/post/${p.id}`}>
                   <Post>
                     <ImgWrapper>
                       <Image src={p.img} />
                     </ImgWrapper>
                     <TextWrapper>
-                      <Category>{p.category}</Category>
-                      <Date>{p.date.toDateString()}</Date>
-                      <Title>
-                        {p.title}
-                      </Title>
+                      <Detail>
+                        <Date>{p.date.toDateString()}</Date>
+                        <Category>{p.category}</Category>
+                      </Detail>
+                      <LineBreak/>
+                      <Title>{p.title}</Title>
                       {p.desc.map((t, i) => (
-                        <Desc
-                          key={i}
-                          className="text"
-                          dangerouslySetInnerHTML={t}
-                        />
+                        <Desc key={i} dangerouslySetInnerHTML={t} />
                       ))}
                     </TextWrapper>
                   </Post>

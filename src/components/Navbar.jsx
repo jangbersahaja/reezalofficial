@@ -5,6 +5,7 @@ import jata from "../img/logo.png";
 
 const Nav = styled.div`
   position: sticky;
+  z-index: 999;
   top: 0;
   padding: 0 5%;
   display: flex;
@@ -21,7 +22,7 @@ const Nav = styled.div`
 
 const Logo = styled.div`
   display: flex;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   align-items: center;
   width: 300px;
 `;
@@ -101,7 +102,7 @@ const Contact = styled(Link)`
   border: 2px solid #d43076;
   border-radius: 20px;
   margin-left: 50px;
-  padding: 10px 20px;
+  padding: 5px 10px;
   &:hover {
     background-color: #d43076;
     color: white;

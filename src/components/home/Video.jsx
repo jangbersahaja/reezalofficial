@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import ReactPlayer from "react-player/youtube";
 
 const Container = styled.div`
   background: linear-gradient(180deg, #f2f6f9 0%, #fff 100%);
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,9 +14,11 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   width: 1064px;
   max-width: 100%;
+
+  min-height: 70vh;
   padding: 30px 0;
   @media (max-width: 992px) {
     width: 100%;
@@ -28,35 +31,36 @@ const SectionTitle = styled.h1`
   font-weight: bold;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin: 50px 0;
   color: #37517e;
   text-align: center;
-
   border-bottom: 7px solid #d43076;
+
+  @media (max-width: 768px) {
+    font-size: 48px;
+  }
 `;
 
 const Gallery = styled.div`
-  width: 1140px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
   @media (max-width: 992px) {
     flex-direction: column;
-    width: 100%;
   }
 `;
 
 const VideoWrapper = styled.div`
   flex: 4;
-  height: 520px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media (max-width: 992px) {
-    width: 100%;
-    height: 300px;
-  }
+  position: relative;
+  padding-top: 56.25%;
+`;
+
+const VideoPlayer = styled(ReactPlayer)`
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 const Slider = styled.div`
@@ -86,24 +90,18 @@ const Video = () => {
         <SectionTitle>Featured Video</SectionTitle>
         <Gallery>
           <VideoWrapper>
-            <iframe
+            <VideoPlayer
+            url={[
+              'https://www.youtube.com/watch?v=o0G8Hbja8AQ&t=1s',
+              'https://www.youtube.com/watch?v=IoBwCifLNew&t=1s',
+              'https://www.youtube.com/watch?v=F1w8LUTX2SY',
+              'https://www.youtube.com/watch?v=fIoAdufQbZI&t=21s'
+            ]}
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/IoBwCifLNew?autoplay=1&mute=1"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+              controls
+            />
           </VideoWrapper>
-          <Slider>
-            <SmallVid>In progress
-            </SmallVid>
-            <SmallVid>In progress
-            </SmallVid>
-            <SmallVid>In progress
-            </SmallVid>
-          </Slider>
         </Gallery>
       </Wrapper>
     </Container>

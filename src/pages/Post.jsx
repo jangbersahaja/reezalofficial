@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
-import PostImg from "../img/home/article1.jpg";
 import { Link } from "react-router-dom";
-import { ArrowBack } from "@material-ui/icons";
+import { ArrowBack, HomeOutlined } from "@material-ui/icons";
 import { useLocation } from "react-router-dom";
 import Articles from "../components/article/article";
 
@@ -66,10 +65,9 @@ const SectionTitle = styled.h2`
   margin: 0 auto;
 
   font-family: "Playfair Display", serif;
-  font-size: 28px;
+  font-size: 36px;
   font-weight: bold;
   line-height: 1;
-  text-transform: uppercase;
   margin-bottom: 30px;
   color: #fff;
   text-align: center;
@@ -95,41 +93,51 @@ const Paper = styled.div`
 
 const TextWrapper = styled.div`
   flex: 3;
-  padding: 30px;
+  padding: 20px;
 
   @media (max-width: 992px) {
     flex: 2;
   }
 `;
 
+const Detail = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+`;
+
 const Category = styled.a`
   font-size: 12px;
   font-weight: bold;
-
-  width: 100px;
+  text-align: center;
   padding: 5px 10px;
-  margin-right: 30px;
-
-  border: 2px solid #2c4964;
-  border-radius: 20px;
+  color: #fff;
+  background-color: #2c4964;
+  margin: auto 0;
 `;
 
 const Date = styled.span`
   font-size: 12px;
   font-weight: bold;
+  margin: auto 0;
 `;
 
 const Desc = styled.p`
   text-align: justify;
   white-space: pre-line;
-  margin: 30px 0;
+  margin: 5px 0;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const BackBtn = styled(Link)`
   position: fixed;
-  top: 15vh;
+  top: 10vh;
   left: 5vh;
   z-index: 99;
+  
   background: #d43076;
   width: 40px;
   height: 40px;
@@ -139,10 +147,50 @@ const BackBtn = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
+  
+
+  @media (max-width: 768px) {
+    top: 82vh;
+    left: 77vw;
+  }
 `;
 
-const ArrowBackBtn = styled(ArrowBack)`
+const HomeBtn = styled(Link)`
+  position: fixed;
+  top: 10vh;
+  left: 11vh;
+  z-index: 99;
+  background: #d43076;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+
+  display: none;
+
+  @media (max-width: 768px) {
+    top: 82vh;
+    left: 88vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const ArrowBackIcon = styled(ArrowBack)`
   color: #fff;
+`;
+
+const HomeIcon = styled(HomeOutlined)`
+  color: #fff;
+`;
+
+const LineBreak = styled.hr`
+  margin: 5px 0;
+  border: 0;
+  height: 0;
+  border-top: 0.8px solid rgba(0, 0, 0, 0.1);
 `;
 
 function SinglePost() {
@@ -155,8 +203,11 @@ function SinglePost() {
       <Navbar />
       <Container>
         <BackBtn to="/blog">
-          <ArrowBackBtn />
+          <ArrowBackIcon />
         </BackBtn>
+        <HomeBtn to="/">
+          <HomeIcon />
+        </HomeBtn>
         {post.map((p) => {
           return (
             <>
@@ -169,8 +220,11 @@ function SinglePost() {
                 <Posts>
                   <Paper>
                     <TextWrapper>
-                      <Category>{p.category}</Category>
-                      <Date>{p.date.toDateString()}</Date>
+                      <Detail>
+                        <Date>{p.date.toDateString()}</Date>
+                        <Category>{p.category}</Category>
+                      </Detail>
+                      <LineBreak />
 
                       {p.desc.map((t, i) => (
                         <Desc

@@ -11,7 +11,7 @@ import ScrollToTop from "./pages/ScrollToTop";
 const App = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <ScrollToTop />
+      <ScrollToTop smooth />
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/blog" component={Blog} />
