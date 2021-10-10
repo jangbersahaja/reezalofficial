@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
-import PostImg from "../img/homepage/article1.jpg";
+import PostImg from "../img/home/article1.jpg";
 import { Link } from "react-router-dom";
-import {ArrowBack} from '@material-ui/icons';
+import { ArrowBack } from "@material-ui/icons";
+import { useLocation } from "react-router-dom";
+import Articles from "../components/article/article";
 
 const Container = styled.div`
   background-color: #2c4964;
@@ -20,7 +22,7 @@ const Hero = styled.div`
       rgba(44, 73, 100, 1),
       rgba(255, 255, 255, 0.3)
     ),
-    url(${PostImg}) center center;
+    url(${(props) => props.bg}) center center;
   background-size: cover;
   height: 100vh;
   color: #fff;
@@ -140,77 +142,54 @@ const BackBtn = styled(Link)`
 `;
 
 const ArrowBackBtn = styled(ArrowBack)`
-color: #fff;
+  color: #fff;
 `;
 
-function Post() {
+function SinglePost() {
+  const location = useLocation();
+  const path = location.pathname.split("/")[2];
+  const post = Articles.filter((e) => e.id === path);
+
   return (
     <div>
       <Navbar />
       <Container>
-        <BackBtn to = "/blog">
+        <BackBtn to="/blog">
           <ArrowBackBtn />
         </BackBtn>
-        <Hero>
-          <TitleWrapper>
-            <SectionTitle>
-              Merawat Keresahan Rakyat Dalam Keadaan Kita Berhadapan Dengan
-              Kesan Pasca Pandemik COVID-19
-            </SectionTitle>
-          </TitleWrapper>
-        </Hero>
-        <Wrapper>
-          <Posts>
-            <Paper>
-              <TextWrapper>
-                <Category>Though</Category>
-                <Date>15 Sep 2021</Date>
-                <Desc>
-                  Dalam merawat keresahan itu juga, saya tekankan bahawa kita
-                  mahu bina keyakinan rakyat dan kita mahu rakyat rasa selamat.
-                  They must feel safe.
-                  {"\n"} {"\n"}
-                  Kerana pada ketika ini, rakyat mahu lihat action and results.
-                  Apa tindakan kita dan apa hasilnya. {"\n"} {"\n"}Ini semua
-                  merupakan sebahagian daripada prime agenda atau agenda utama
-                  saya serta pasukan KPKT iaitu{" "}
-                  <strong>&ldquo;LIVEABLE MALAYSIA&rdquo;</strong> atau{" "}
-                  <strong>&ldquo;MALAYSIA BERDAYA HUNI&rdquo;.</strong>
-                  {"\n"} {"\n"}
-                  Liveable dalam konteks ini adalah untuk persekitaran yang
-                  bukan sahaja berkualiti kepada para penghuni malah turut
-                  mempunyai ciri- ciri yang mampan sama ada BUILT ENVIRONMENT
-                  atau NATURAL ENVIRONMENT.
-                  {"\n"} {"\n"}
-                  Ini termasuklah dari aspek{" "}
-                  <strong>INFRASTRUKTUR FIZIKAL</strong> yang mencukupi seperti
-                  kemudahan awam, pengangkutan awam dan taman awam.
-                  {"\n"} {"\n"}
-                  Begitu juga <strong>INFRASTRUKTUR SOSIAL</strong> seperti
-                  connectivity internet untuk tujuan sama ada pembelajaran atau
-                  perniagaan, home-based enterprises; akses kepada sistem
-                  kesihatan; akses kepada pendidikan; dan akses kepada community
-                  development termasuklah kemudahan sukan dan rekreasi.
-                  {"\n"} {"\n"}
-                  Ia akan turut dilengkapi dengan{" "}
-                  <strong>PERSEKITARAN YANG BERKUALITI</strong> seperti
-                  persekitaran yang selamat, ceria, ada elemen green environment
-                  dan kejiranan yang saling membantu.
-                  {"\n"} {"\n"}
-                  <strong>
-                    YB DATO' SRI REEZAL MERICAN NAINA MERICAN
-                    {"\n"}
-                    MENTERI PERUMAHAN DAN KERAJAAN TEMPATAN
-                  </strong>
-                </Desc>
-              </TextWrapper>
-            </Paper>
-          </Posts>
-        </Wrapper>
+        {post.map((p) => {
+          return (
+            <>
+              <Hero bg={p.img}>
+                <TitleWrapper>
+                  <SectionTitle>{p.title}</SectionTitle>
+                </TitleWrapper>
+              </Hero>
+              <Wrapper>
+                <Posts>
+                  <Paper>
+                    <TextWrapper>
+                      <Category>{p.category}</Category>
+                      <Date>{p.date.toDateString()}</Date>
+
+                      {p.desc.map((t, i) => (
+                        <Desc
+                          key={i}
+                          className="text"
+                          dangerouslySetInnerHTML={t}
+                        />
+                      ))}
+                    </TextWrapper>
+                  </Paper>
+                </Posts>
+              </Wrapper>
+            </>
+          );
+        })}
       </Container>
       <Footer />
     </div>
   );
 }
 
-export default Post;
+export default SinglePost;

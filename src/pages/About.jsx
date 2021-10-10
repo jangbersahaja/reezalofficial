@@ -105,17 +105,17 @@ function About() {
               Politician, Member of Parliament for Kepala Batas, and serves the
               Malaysian Government. Reezal Merican Naina Merican is the current
               Minister of Housing and Local Government.
-              {"\n"} {"\n"}
+              {"<br>"} {"<br>"}
               During his tenure as the Minister of Youth and Sports, Reezal has
               devoted his career to focus on strengthening Youth and Malaysian
               Athletes. He has led the Malaysian Contingent during the Tokyo
               2020 Olympics where the athletes successfully brought home one
               silver and one bronze medal.
-              {"\n"} {"\n"}
+              {"<br>"} {"<br>"}
               He is involved in various initiatives under both state and
               national programmes advocating for the long-term benefit of
               Malaysian society and the world community.
-              {"\n"} {"\n"}
+              {"<br>"} {"<br>"}
               His past experience also includes a strong portfolio serving in
               both policy-making and foreign affairs throughout his career.
             </Text>

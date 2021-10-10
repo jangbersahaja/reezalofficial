@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import KBBG from "../../img/homepage/kepalabatas-bg.jpg";
+import KBBG from "../../img/home/kepalabatas-bg.jpg";
 
 const Container = styled.div`
   height: 60vh;

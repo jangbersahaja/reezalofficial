@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import PostImg1 from "../../img/homepage/about1.jpg";
-import PostImg2 from "../../img/homepage/about2.jpg";
-import PostImg3 from "../../img/homepage/about3.jpg";
+import PostImg1 from "../../img/home/about1.jpg";
+import PostImg2 from "../../img/home/about2.jpg";
+import PostImg3 from "../../img/home/about3.jpg";
 
 const Container = styled.div`
   background: linear-gradient(180deg, #f2f6f9 0%, #fff 100%);

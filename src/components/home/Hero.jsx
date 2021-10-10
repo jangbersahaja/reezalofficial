@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import HeroBG from "../../img/homepage/hero-bg.jpg";
+import HeroBG from "../../img/home/hero-bg.jpg";
 
 const Container = styled.div`
   display: flex;
@@ -104,7 +104,7 @@ const Hero = () => {
     <Container>
       <HeroText>
         Selamat Datang
-        {"\n"}
+        <br/>
         #KeluargaMalaysia
       </HeroText>
       <ScrollUp>

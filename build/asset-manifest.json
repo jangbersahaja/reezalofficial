@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/reezalofficial/static/js/main.96cc1d78.chunk.js",
-    "main.js.map": "/reezalofficial/static/js/main.96cc1d78.chunk.js.map",
+    "main.js": "/reezalofficial/static/js/main.e8bed877.chunk.js",
+    "main.js.map": "/reezalofficial/static/js/main.e8bed877.chunk.js.map",
     "runtime-main.js": "/reezalofficial/static/js/runtime-main.6d3656a6.js",
     "runtime-main.js.map": "/reezalofficial/static/js/runtime-main.6d3656a6.js.map",
     "static/js/2.fce72559.chunk.js": "/reezalofficial/static/js/2.fce72559.chunk.js",
@@ -25,6 +25,6 @@
   "entrypoints": [
     "static/js/runtime-main.6d3656a6.js",
     "static/js/2.fce72559.chunk.js",
-    "static/js/main.96cc1d78.chunk.js"
+    "static/js/main.e8bed877.chunk.js"
   ]
 }

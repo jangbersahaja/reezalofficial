@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Liveable from "../../img/homepage/liveable2.jpg";
+import Liveable from "../../img/home/liveable2.jpg";
 
 const Container = styled.div`
   background: linear-gradient(180deg, #f2f6f9 0%, #fff 100%);

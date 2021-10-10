@@ -28,7 +28,7 @@ const SocialMedia = styled.div`
   align-items: center;
 `;
 
-const SocMedIcon = styled.div`
+const SocMedIcon = styled.a`
   margin: 0 10px;
   width: 40px;
   height: 40px;
@@ -37,6 +37,7 @@ const SocMedIcon = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  cursor: pointer;
 `;
 
 const Right = styled.div`
@@ -60,13 +61,13 @@ const Footer = () => {
     <Wrapper>
       <Left>
         <SocialMedia>
-          <SocMedIcon>
+          <SocMedIcon  href = "https://www.facebook.com/reezal.merican041" target="_blank">
             <Facebook />
           </SocMedIcon>
-          <SocMedIcon>
+          <SocMedIcon href = "https://www.instagram.com/reezal_merican/" target="_blank">
             <Instagram />
           </SocMedIcon>
-          <SocMedIcon>
+          <SocMedIcon href = "https://twitter.com/reezal_merican" target="_blank">
             <Twitter />
           </SocMedIcon>
         </SocialMedia>

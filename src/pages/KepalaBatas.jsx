@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
-import Post1 from "../img/homepage/kepalabatas-bg.jpg";
+import Post1 from "../img/home/kepalabatas-bg.jpg";
 
 const Container = styled.div`
   background-color: #2c4964;
@@ -133,7 +133,7 @@ function KepalaBatas() {
                   Selatan bagi penduduk sini. Bandar ini dengan Pulau Pinang
                   juga merupakan bandar seperti Kuala Lumpur dan Gombak di Pulau
                   Pinang.
-                  {"\n"} {"\n"}
+                  {"<br>"} {"<br>"}
                   'Kepala Batas' bermaksud bahagian depan sawah padi. Batas
                   ialah pemisah antara tanah pesawah-pesawah padi . Biasanya
                   batas ini dibuat daripada tanah sebagai benteng penahan air
