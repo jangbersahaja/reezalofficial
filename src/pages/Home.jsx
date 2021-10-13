@@ -7,12 +7,14 @@ import KBSection from "../components/home/KBSection";
 import Article from "../components/home/Article";
 import Video from "../components/home/Video";
 import Contact from "../components/Contact";
+import HundredDays from "../components/home/HundredDays";
 
 function Home() {
   return (
     <div>
       <Hero />
       <Navbar />
+      <HundredDays />
       <Agenda />
       <KBSection />
       <Article />

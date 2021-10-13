@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Liveable from "../../img/home/liveable2.jpg";
+import Articles from "../article/article";
 
 const Container = styled.div`
   background: linear-gradient(180deg, #f2f6f9 0%, #fff 100%);
@@ -44,39 +44,45 @@ const Post = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  width: 1140px;
   @media (max-width: 992px) {
     flex-direction: column;
     width: 100%;
   }
 `;
 
-const ImgWrapper = styled.div`
-  flex: 3;
-  height: 80vh;
-  overflow: hidden;
+const ImgsWrapper = styled.div`
+  flex: 4;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+
+  border-radius: 10px;
+
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+
   @media (max-width: 992px) {
+    flex-direction: column;
     width: 100%;
-    height: 400px;
+    height: 500px;
   }
 `;
 
-const Image = styled.img`
+const Image = styled.div`
   height: 100%;
+  width: 100%;
+
+  background: url(${(props) => props.src}) center center;
+  background-size: cover;
   object-fit: cover;
-  @media (max-width: 992px) {
-    width: 100%;
-  }
 `;
 
 const Text = styled.div`
   flex: 2;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+
   @media (max-width: 992px) {
     width: 100%;
   }
@@ -86,26 +92,36 @@ const Desc = styled.div`
   display: flex;
   flex-direction: column;
   align-content: center;
-  padding: 20px 70px;
+  padding: 0 40px;
   @media (max-width: 992px) {
-    padding: 20px 50px;
+    padding: 20px 40px;
   }
 `;
 
 const Date = styled.span`
-  align-self: flex-start;
+  font-size: 12px;
+  font-weight: bold;
 `;
 
-const Title = styled.h1`
-  margin-top: 20px;
-  font-size: 4em;
+const Title = styled.h2`
+  font-size: 24px;
   line-height: 1;
-  margin-bottom: 20px;
+  margin: 20px 0;
 `;
 
 const PostText = styled.p`
   text-align: justify;
   white-space: pre-line;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+
+  li {
+    display: none;
+  }
 `;
 
 const ReadMore = styled(Link)`
@@ -140,34 +156,41 @@ const MoreArticle = styled(Link)`
 `;
 
 const Article = () => {
+  const featured = "2";
+  const post = Articles.filter((e) => e.id === featured);
+
   return (
     <Container>
       <Wrapper>
         <SectionTitle>Featured Article</SectionTitle>
-        <Post>
-          <ImgWrapper>
-            <Image src={Liveable} />
-          </ImgWrapper>
-          <Text>
-            <Desc>
-              <Date>1 Hour Ago</Date>
-              <Title>Liveable Malaysia</Title>
-              <PostText>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-                cumque autem aperiam enim? Sit sequi fuga magni quisquam! Quae
-                vero dolorum inventore vitae expedita quasi adipisci eum quidem
-                possimus earum.
-                {"\n"} {"\n"}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-                cumque autem aperiam enim? Sit sequi fuga magni quisquam! Quae
-                vero dolorum inventore vitae expedita quasi adipisci eum quidem
-                possimus earum.
-              </PostText>
-              <ReadMore to = "">Read This Article</ReadMore>
-              <MoreArticle to="/blog">More Article</MoreArticle>
-            </Desc>
-          </Text>
-        </Post>
+        {post.map((p) => {
+          return (
+            <>
+              <Post>
+                <ImgsWrapper>
+                  <Image src={p.img} />
+                </ImgsWrapper>
+
+                <Text>
+                  <Desc>
+
+                  <Date>{p.date.toDateString()}</Date>
+                    <Title>{p.title}</Title>
+                    {p.desc.map((t, i) => (
+                        <PostText
+                          key={i}
+                          className="text"
+                          dangerouslySetInnerHTML={t}
+                        />
+                      ))}
+                    <ReadMore to={`/post/${p.id}`}>Read This Article</ReadMore>
+                    <MoreArticle to="/blog">More Article</MoreArticle>
+                  </Desc>
+                </Text>
+              </Post>
+            </>
+          );
+        })}
       </Wrapper>
     </Container>
   );

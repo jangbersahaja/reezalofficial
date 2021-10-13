@@ -132,7 +132,7 @@ const TextArea = styled.textarea`
 
 const SubmitButton = styled.button`
   background-color: #d43076;
-    color: white;
+  color: white;
   transition: all 0.3s ease-in;
   border: 2px solid #d43076;
   margin-top: 30px;
@@ -141,7 +141,6 @@ const SubmitButton = styled.button`
     background-color: #dd176d;
   }
 `;
-
 
 const Contact = () => {
   return (
@@ -154,11 +153,9 @@ const Contact = () => {
               <Title>Have a message to share with Reezal Merican?</Title>
               <ItemTitle>Address.</ItemTitle>
               <PostText>
-                Wisma UMNO Bahagian Kepala Batas, {"\n"}Jalan Bertam
-                13200 Kepala Batas
+                Kementerian Perumahan dan {"\n"}Kerajaan Tempatan{"\n"}Aras 18, No. 51,
+                Persiaran Perdana, {"\n"}Presint 4, 62100 Putrajaya
               </PostText>
-              <ItemTitle>Hours.</ItemTitle>
-              <PostText>Monday – Friday ( 11am - 5pm )</PostText>
               <ItemTitle>Phone Number.</ItemTitle>
               <PostText>01-234 5678</PostText>
               <ItemTitle>Email.</ItemTitle>

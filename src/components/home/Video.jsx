@@ -55,6 +55,8 @@ const VideoWrapper = styled.div`
   flex: 4;
   position: relative;
   padding-top: 56.25%;
+
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.2);
 `;
 
 const VideoPlayer = styled(ReactPlayer)`

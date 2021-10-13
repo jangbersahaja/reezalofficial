@@ -131,13 +131,13 @@ const Agenda = () => {
                   mereka yang terkesan akibat COVID-19 ini.
                 </PostTitle>
                 <PostText>
-                  Kita sedar, di luar sana, ramai rakyat yang terkesan &ndash;
+                Kita sedar, di luar sana, ramai rakyat yang terkesan &ndash;
                   dari aspek ekonomi, sosial mahupun psikologi. Dan menjadi
                   tugas serta tanggungjawab kita adalah untuk bina keyakinan
                   rakyat. {"\n"} {"\n"}
                   <em>We must instill and build hopes</em> kepada rakyat. Kita
                   mahu rakyat lihat, rakyat rasa dan rakyat dapat pegang
-                  keyakinan itu dalam bulan-bulan mendatang ini. &nbsp;
+                  keyakinan itu dalam bulan-bulan mendatang ini.
                   Keyakinan yang bagaimana? Kita mahu rakyat rasa selamat.
                   {"\n"} {"\n"}
                   <em>

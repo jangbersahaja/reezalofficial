@@ -137,7 +137,7 @@ const BackBtn = styled(Link)`
   top: 10vh;
   left: 5vh;
   z-index: 99;
-  
+
   background: #d43076;
   width: 40px;
   height: 40px;
@@ -147,7 +147,6 @@ const BackBtn = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  
 
   @media (max-width: 768px) {
     top: 82vh;
