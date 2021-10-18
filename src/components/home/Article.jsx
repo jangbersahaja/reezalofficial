@@ -44,6 +44,7 @@ const Post = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
+
   @media (max-width: 992px) {
     flex-direction: column;
     width: 100%;
@@ -65,7 +66,7 @@ const ImgsWrapper = styled.div`
   @media (max-width: 992px) {
     flex-direction: column;
     width: 100%;
-    height: 500px;
+    height: 300px;
   }
 `;
 
@@ -116,12 +117,19 @@ const PostText = styled.p`
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 10;
+  -webkit-line-clamp: 11;
   -webkit-box-orient: vertical;
 
   li {
     display: none;
   }
+`;
+
+const ButtonDiv = styled.div`
+  display: flex;
+
+  margin: 20px 30px 50px 30px;
+  justify-content: space-between;
 `;
 
 const ReadMore = styled(Link)`
@@ -148,7 +156,7 @@ const MoreArticle = styled(Link)`
   color: white;
   transition: all 0.3s ease-in;
   border: 2px solid #d43076;
-  margin-top: 10px;
+  margin-top: 30px;
   padding: 10px 20px;
   &:hover {
     background-color: #b32160;
@@ -156,7 +164,7 @@ const MoreArticle = styled(Link)`
 `;
 
 const Article = () => {
-  const featured = "2";
+  const featured = "3";
   const post = Articles.filter((e) => e.id === featured);
 
   return (
@@ -173,19 +181,20 @@ const Article = () => {
 
                 <Text>
                   <Desc>
-
-                  <Date>{p.date.toDateString()}</Date>
+                    <Date>{p.date.toDateString()}</Date>
                     <Title>{p.title}</Title>
                     {p.desc.map((t, i) => (
-                        <PostText
-                          key={i}
-                          className="text"
-                          dangerouslySetInnerHTML={t}
-                        />
-                      ))}
-                    <ReadMore to={`/post/${p.id}`}>Read This Article</ReadMore>
-                    <MoreArticle to="/blog">More Article</MoreArticle>
+                      <PostText
+                        key={i}
+                        className="text"
+                        dangerouslySetInnerHTML={t}
+                      />
+                    ))}
                   </Desc>
+                  <ButtonDiv>
+                    <ReadMore to={`/post/${p.id}`}>Read This Article</ReadMore>
+                    <MoreArticle to="/blog">More Articles</MoreArticle>
+                  </ButtonDiv>
                 </Text>
               </Post>
             </>

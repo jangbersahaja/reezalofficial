@@ -6,7 +6,11 @@ import Post from "./pages/Post";
 import About from "./pages/About";
 import ContactMe from "./pages/ContactMe";
 import KepalaBatas from "./pages/KepalaBatas";
+
+import Media from "./pages/Media";
 import ScrollToTop from "./pages/ScrollToTop";
+
+import RumahIkram from "./components/KPI/RumahIkram";
 
 const App = () => {
   return (
@@ -16,12 +20,12 @@ const App = () => {
         <Route path="/" component={Home} exact />
         <Route path="/blog" component={Blog} />
         <Route path="/post" component={Post} />
-
         <Route path="/post" component={Post} />
-
         <Route path="/about" component={About} />
         <Route path="/contact" component={ContactMe} />
         <Route path="/kepalabatas" component={KepalaBatas} />
+        <Route path="/rumahikram" component={RumahIkram} />
+        <Route path="/media" component={Media} />
       </Switch> 
     </BrowserRouter>
   );

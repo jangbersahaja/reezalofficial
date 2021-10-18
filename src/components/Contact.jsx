@@ -124,6 +124,7 @@ const TextArea = styled.textarea`
   padding: 10px;
   width: 100%;
   margin-bottom: 10px;
+  font-family: sans-serif;
 
   &::placeholder {
     opacity: 0.5;

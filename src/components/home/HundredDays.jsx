@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import KPISatu from "./KPISatu";
-import KPIDua from "./KPIDua";
-import KPITiga from "./KPITiga";
-import KPIEmpat from "./KPIEmpat";
+import KPILiveable from "./KPILiveable";
 import KPICard from "./KPICard";
 
 const Container = styled.div`
@@ -48,7 +45,7 @@ const SectionTitle = styled.h1`
   font-weight: bold;
   line-height: 1;
   text-transform: uppercase;
-  
+
   color: #37517e;
   text-align: center;
   border-bottom: 7px solid #d43076;
@@ -73,7 +70,7 @@ const HundredDays = () => {
 
         <Wrapper>
           <SectionTitle>Fokus 100 Hari di KPKT</SectionTitle>
-          <KPIEmpat />
+          <KPILiveable />
           <KPICard />
         </Wrapper>
       </Container>

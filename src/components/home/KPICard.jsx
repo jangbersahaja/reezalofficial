@@ -86,7 +86,7 @@ const KPICard = () => {
               golongan B40 yang terjejas pendapatan akibat COVID-19 dan layak
               mendapat manfaat dari program ini.
             </Desc>
-            <ReadMore to="">. . . Read More</ReadMore>
+            <ReadMore to="/rumahikram">. . . Read More</ReadMore>
           </TextWrapper>
         </Card>
 

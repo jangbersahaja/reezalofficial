@@ -165,7 +165,10 @@ const HomeBtn = styled(Link)`
   border-radius: 50px;
   transition: all 0.4s;
 
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 
   @media (max-width: 768px) {
     top: 82vh;

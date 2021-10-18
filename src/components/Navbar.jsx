@@ -138,7 +138,7 @@ const Navbar = () => {
         <MenuLink to="/">Home</MenuLink>
         <MenuLink to="/blog">Blog</MenuLink>
         <MenuLink to="/kepalabatas">Kepala Batas</MenuLink>
-        <MenuLink to="#">Media</MenuLink>
+        <MenuLink to="/media">Media</MenuLink>
         <MenuLink to="/about">About</MenuLink>
         <Contact to="/contact">Contact</Contact>
       </Menu>

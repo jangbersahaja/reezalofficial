@@ -46,6 +46,7 @@ const AboutPost = styled.div`
   flex-direction: ${(props) => props.direction};
   padding: 30px;
   height: 450px;
+  
   @media (max-width: 960px) {
     flex-direction: column;
     min-height: 110vh;

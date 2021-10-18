@@ -65,25 +65,7 @@ const VideoPlayer = styled(ReactPlayer)`
   left: 0;
 `;
 
-const Slider = styled.div`
-  flex: 1;
-  margin: 0 5px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  @media (max-width: 992px) {
-    flex-direction: row;
-    width: 100%;
-    margin: 5px 0;
-  }
-`;
 
-const SmallVid = styled.div`
-  flex: 1;
-  margin: 5px;
-  background-color: blanchedalmond;
-`;
 
 const Video = () => {
   return (

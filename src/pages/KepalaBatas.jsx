@@ -111,7 +111,7 @@ function KepalaBatas() {
       <Container>
         <Hero>
           <TitleWrapper>
-            <SectionTitle>Kepala Batas DiHatiku</SectionTitle>
+            <SectionTitle>Kepala Batas Di Hatiku</SectionTitle>
           </TitleWrapper>
         </Hero>
         <Wrapper>
@@ -133,7 +133,7 @@ function KepalaBatas() {
                   Selatan bagi penduduk sini. Bandar ini dengan Pulau Pinang
                   juga merupakan bandar seperti Kuala Lumpur dan Gombak di Pulau
                   Pinang.
-                  {"<br>"} {"<br>"}
+                  <br/><br/>
                   'Kepala Batas' bermaksud bahagian depan sawah padi. Batas
                   ialah pemisah antara tanah pesawah-pesawah padi . Biasanya
                   batas ini dibuat daripada tanah sebagai benteng penahan air
