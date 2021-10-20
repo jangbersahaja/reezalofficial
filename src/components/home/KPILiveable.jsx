@@ -7,14 +7,13 @@ const BGContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
   width: 100%;
 `;
 
 const Post = styled.div`
   display: flex;
   justify-content: space-between;
-
 
   @media (max-width: 992px) {
     flex-direction: column;
@@ -28,7 +27,7 @@ const ImgsWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  height: 550px;
+  height: 500px;
 
   overflow: hidden;
   border-radius: 10px;
@@ -84,11 +83,13 @@ const Title = styled.h1`
 `;
 
 const PostText = styled.p`
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 11;
+  -webkit-line-clamp: 14;
   -webkit-box-orient: vertical;
 
   li {
@@ -97,16 +98,17 @@ const PostText = styled.p`
 `;
 
 const ReadMore = styled(Link)`
+  text-align: center;
   font-size: 14px;
   display: block;
   transition: all 0.3s ease-in;
-  margin: 20px 0;
   cursor: pointer;
+  font-weight: 900;
+  margin-bottom: 20px;
   &:hover {
     color: #d43076;
   }
 `;
-
 
 const LineBreak = styled.hr`
   margin: 10px 0;
@@ -115,27 +117,26 @@ const LineBreak = styled.hr`
   border-top: 0.8px solid rgba(0, 0, 0, 0.1);
 `;
 
-const KPILiveable
- = () => {
+const KPILiveable = () => {
   return (
     <BGContainer>
       <Post>
         <ImgsWrapper>
           <Image
             src={require("../../img/home/liveable1.jpg")}
-            bg="#6d6b7c7c"
+            bg="#5b6f7c79"
             m="-60px"
           />
 
           <Image
             src={require("../../img/home/liveable2.jpg")}
-            bg="#6d6b7c7c"
+            bg="#5b6f7c79"
             m="60px"
           />
 
           <Image
             src={require("../../img/home/liveable3.jpg")}
-            bg="#6d6b7c7c"
+            bg="#5b6f7c79"
             m="-60px"
           />
         </ImgsWrapper>
@@ -199,12 +200,12 @@ const KPILiveable
               </li>
             </ul>
           </PostText>
-          <ReadMore to="">. . . Read More</ReadMore>
+          <LineBreak />
+          <ReadMore to="">Click to read</ReadMore>
         </TextWrapper>
       </Post>
     </BGContainer>
   );
 };
 
-export default KPILiveable
-;
+export default KPILiveable;

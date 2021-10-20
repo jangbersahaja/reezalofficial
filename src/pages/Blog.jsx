@@ -74,10 +74,12 @@ const Post = styled.div`
   display: flex;
   margin: 15px;
 
+  overflow: hidden;
   background-color: #fff;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     min-height: 300px;
   }
@@ -86,6 +88,10 @@ const Post = styled.div`
 const ImgWrapper = styled.div`
   flex: 2;
   display: flex;
+
+  @media (max-width: 992px) {
+    flex: 1;
+  }
 `;
 
 const Image = styled.img`
@@ -105,7 +111,7 @@ const TextWrapper = styled.div`
 
   @media (max-width: 992px) {
     min-height: 100px;
-    flex: auto;
+    flex: 1;
   }
 `;
 
@@ -127,7 +133,6 @@ const Category = styled.a`
 
 const Date = styled.span`
   font-size: 12px;
-  font-weight: bold;
   margin: auto 0;
 `;
 
@@ -141,6 +146,8 @@ const Desc = styled.p`
   text-align: justify;
   white-space: pre-line;
 
+  font-size: 14px;
+  line-height: 1.5;
   font-weight: 100;
 
   overflow: hidden;
@@ -154,6 +161,36 @@ const Desc = styled.p`
   }
 `;
 
+const ShowMore = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 50px 0;
+
+`;
+
+const ShowMoreButton = styled.button`
+  height: 120px;
+  width: 120px;
+  margin: 15px;
+  padding: 10px;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  border: none;
+  color: #fff;
+  background: #d43076;
+  border-radius: 60px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+
+  transition: all 0.4s;
+
+  &:hover {
+    width: 100%;
+    border-radius: 10px;
+  }
+`;
+
 const LineBreak = styled.hr`
   margin: 5px 0;
   border: 0;
@@ -162,6 +199,8 @@ const LineBreak = styled.hr`
 `;
 
 function Blog() {
+  const sortedArticles = Articles.sort((a, b) => b.date - a.date);
+
   return (
     <div>
       <Navbar />
@@ -173,7 +212,7 @@ function Blog() {
         </Hero>
         <Wrapper>
           <Posts>
-            {Articles.reverse().map((p) => {
+            {sortedArticles.map((p) => {
               return (
                 <Link to={`/post/${p.id}`}>
                   <Post>
@@ -185,7 +224,7 @@ function Blog() {
                         <Date>{p.date.toDateString()}</Date>
                         <Category>{p.category}</Category>
                       </Detail>
-                      <LineBreak/>
+                      <LineBreak />
                       <Title>{p.title}</Title>
                       {p.desc.map((t, i) => (
                         <Desc key={i} dangerouslySetInnerHTML={t} />
@@ -195,6 +234,9 @@ function Blog() {
                 </Link>
               );
             })}
+            <ShowMore>
+              <ShowMoreButton >Show More</ShowMoreButton>
+            </ShowMore>
           </Posts>
         </Wrapper>
       </Container>

@@ -83,6 +83,7 @@ const Paper = styled.div`
 
   margin: 0 15px 30px 15px;
 
+  border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
 
@@ -93,7 +94,7 @@ const Paper = styled.div`
 
 const TextWrapper = styled.div`
   flex: 3;
-  padding: 20px;
+  padding: 15px;
 
   @media (max-width: 992px) {
     flex: 2;
@@ -123,13 +124,12 @@ const Date = styled.span`
 `;
 
 const Desc = styled.p`
+  font-size: 14px;
+  line-height: 1.5;
+
   text-align: justify;
   white-space: pre-line;
   margin: 5px 0;
-
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
-  }
 `;
 
 const BackBtn = styled(Link)`
@@ -169,7 +169,6 @@ const HomeBtn = styled(Link)`
   justify-content: center;
   align-items: center;
 
-
   @media (max-width: 768px) {
     top: 82vh;
     left: 88vw;
@@ -189,7 +188,7 @@ const HomeIcon = styled(HomeOutlined)`
 `;
 
 const LineBreak = styled.hr`
-  margin: 5px 0;
+  margin: 10px 0;
   border: 0;
   height: 0;
   border-top: 0.8px solid rgba(0, 0, 0, 0.1);

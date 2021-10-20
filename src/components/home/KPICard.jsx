@@ -56,15 +56,19 @@ const TextWrapper = styled.div`
 const Title = styled.h2``;
 
 const Desc = styled.p`
-  line-height: 1.8;
+font-size: 14px;
+line-height: 1.5;
+text-align: justify;
 `;
 
 const ReadMore = styled(Link)`
+  text-align: center;
   font-size: 14px;
   display: block;
   transition: all 0.3s ease-in;
-  margin: 20px 0;
   cursor: pointer;
+  font-weight: 900;
+  margin-bottom: 20px;
   &:hover {
     color: #d43076;
   }
@@ -85,8 +89,8 @@ const KPICard = () => {
               Inisiatif ini dirangka secara bersasar dengan tumpuan kepada
               golongan B40 yang terjejas pendapatan akibat COVID-19 dan layak
               mendapat manfaat dari program ini.
-            </Desc>
-            <ReadMore to="/rumahikram">. . . Read More</ReadMore>
+            </Desc><LineBreak />
+            <ReadMore to="/rumahikram">Click to read</ReadMore>
           </TextWrapper>
         </Card>
 
@@ -98,8 +102,8 @@ const KPICard = () => {
               Pemasangan wireless hotspots di common areas seperti surau dan
               dewan di 36 PPR bagi memperluaskan akses dan connectivity internet
               kepada warga B40.
-            </Desc>
-            <ReadMore to="">. . . Read More</ReadMore>
+            </Desc><LineBreak />
+            <ReadMore to="">Click to read</ReadMore>
           </TextWrapper>
           <IconWrapper>
             <IconLogo src={require("../../img/home/ppr.jpg")} />
@@ -117,8 +121,8 @@ const KPICard = () => {
               dengan memperkenalkan amalan norma baharu bagi pengoperasian pasar
               malam.
             </Desc>
-
-            <ReadMore to="">. . . Read More</ReadMore>
+            <LineBreak />
+            <ReadMore to="">Click to read</ReadMore>
           </TextWrapper>
         </Card>
       </Wrapper>

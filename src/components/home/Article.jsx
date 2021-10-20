@@ -45,14 +45,14 @@ const Post = styled.div`
   justify-content: center;
   align-content: center;
 
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     width: 100%;
   }
 `;
 
 const ImgsWrapper = styled.div`
-  flex: 4;
+  width: 66%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,10 +60,14 @@ const ImgsWrapper = styled.div`
   border-radius: 10px;
 
   position: relative;
-  height: 70vh;
+  height: 500px;
   overflow: hidden;
 
   @media (max-width: 992px) {
+    width: 50%;
+  }
+
+  @media (max-width: 768px) {
     flex-direction: column;
     width: 100%;
     height: 300px;
@@ -80,11 +84,15 @@ const Image = styled.div`
 `;
 
 const Text = styled.div`
-  flex: 2;
+  width: 33%;
   display: flex;
   flex-direction: column;
 
   @media (max-width: 992px) {
+    width: 50%;
+  }
+
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -101,23 +109,24 @@ const Desc = styled.div`
 
 const Date = styled.span`
   font-size: 12px;
-  font-weight: bold;
+  margin: auto 0;
 `;
 
 const Title = styled.h2`
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1;
-  margin: 20px 0;
 `;
 
 const PostText = styled.p`
   text-align: justify;
   white-space: pre-line;
+  font-size: 14px;
+  line-height: 1.5;
 
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 11;
+  -webkit-line-clamp: 14;
   -webkit-box-orient: vertical;
 
   li {
@@ -135,16 +144,12 @@ const ButtonDiv = styled.div`
 const ReadMore = styled(Link)`
   text-align: center;
   font-size: 14px;
-
-  background-color: #fff;
+  display: block;
   transition: all 0.3s ease-in;
-  border: 2px solid #d43076;
-  margin-top: 30px;
-  padding: 10px 20px;
   cursor: pointer;
+  font-weight: 900;
   &:hover {
-    background-color: #d43076;
-    color: white;
+    color: #d43076;
   }
 `;
 
@@ -161,6 +166,13 @@ const MoreArticle = styled(Link)`
   &:hover {
     background-color: #b32160;
   }
+`;
+
+const LineBreak = styled.hr`
+  margin: 10px 0;
+  border: 0;
+  height: 0;
+  border-top: 0.8px solid rgba(0, 0, 0, 0.1);
 `;
 
 const Article = () => {
@@ -182,7 +194,9 @@ const Article = () => {
                 <Text>
                   <Desc>
                     <Date>{p.date.toDateString()}</Date>
+                    <LineBreak />
                     <Title>{p.title}</Title>
+                    <LineBreak />
                     {p.desc.map((t, i) => (
                       <PostText
                         key={i}
@@ -190,11 +204,9 @@ const Article = () => {
                         dangerouslySetInnerHTML={t}
                       />
                     ))}
+                    <LineBreak />
+                    <ReadMore to={`/post/${p.id}`}>Click to read</ReadMore>
                   </Desc>
-                  <ButtonDiv>
-                    <ReadMore to={`/post/${p.id}`}>Read This Article</ReadMore>
-                    <MoreArticle to="/blog">More Articles</MoreArticle>
-                  </ButtonDiv>
                 </Text>
               </Post>
             </>

@@ -68,7 +68,7 @@ const Item = styled.div`
 const ItemImg = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-top: 10px;
+  margin: 20px 0;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -93,11 +93,13 @@ const ItemImgWrapper = styled.div`
 `;
 
 const Title = styled.h2`
-  margin-top: 30px;
+  margin: 20px 0;
 `;
 
 const Desc = styled.p`
-  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
 `;
 
 const Detail = styled.div`
@@ -131,12 +133,12 @@ const Span = styled.span`
 const Card = styled.div`
   display: flex;
 
-  border-radius: 10px;
-  margin-top: 30px;
+  margin: 30px 0;
   width: 500px;
   max-width: 100%;
   background-color: #fff;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 `;
 
 const CardImg = styled.div`
@@ -160,7 +162,7 @@ const CardText = styled.div`
 `;
 
 const LineBreak = styled.hr`
-  margin: 30px 0;
+  margin: 10px 0;
   border: 0;
   height: 0;
   border-top: 0.8px solid rgba(0, 0, 0, 0.1);
@@ -285,20 +287,27 @@ const RumahIkram = () => {
             </Desc>
           </Item>
           <LineBreak />
-          <a
-            href="https://teduh.kpkt.gov.my/project?scheme=RUMAH%20IKRAM%20KELUARGA%20MALAYSIA"
-            target="_blank"
-          >
-            <Card>
-              <CardImg>
+
+          <Card>
+            <CardImg>
+              <a
+                href="https://teduh.kpkt.gov.my/scheme/rumah-ikram-keluarga-malaysia"
+                target="_blank"
+              >
                 <Image src={require("../../img/home/logo-ikram.png")} />
-              </CardImg>
-              <CardText>
+              </a>
+            </CardImg>
+            <CardText>
+              <a
+                href="https://teduh.kpkt.gov.my/scheme/rumah-ikram-keluarga-malaysia"
+                target="_blank"
+              >
                 <Title>Pautan Permohonan</Title>
-                <Span>www.teduh.kpkt.my</Span>
-              </CardText>
-            </Card>
-          </a>
+                <Span>https://teduh.kpkt.gov.my/</Span>
+              </a>
+            </CardText>
+          </Card>
+
           <LineBreak />
           <Item>
             <Title>Pelancaran Rumah IKRAM KPKT oleh YAB Perdana Menteri</Title>
@@ -429,13 +438,6 @@ const RumahIkram = () => {
               keseluruhannya.
               <br />
               <br />
-              Saya juga berkesempatan melihat pelaksanaan program Zero Waste
-              Community (ZeComm) dan Kebun Komuniti yang diusahakan oleh para
-              penduduk di PPR Lembah Subang 2 yang merupakan sebahagian daripada
-              inisiatif Dasar Komuniti Negara. Usaha yang dilaksanakan oleh para
-              penduduk ini sebenarnya merupakan satu initial game changer dalam
-              kita menzahirkan hasrat persekitaran kediaman yang sustainable
-              atau mampan.
             </Desc>
           </Item>
         </Wrapper>

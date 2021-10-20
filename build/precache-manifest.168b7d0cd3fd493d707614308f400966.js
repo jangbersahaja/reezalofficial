@@ -1,27 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f69a4779794b0b98ae279efd710dfef1",
+    "revision": "03768aef6a2cef0773c2798ae1971167",
     "url": "/reezalofficial/index.html"
   },
   {
-    "revision": "11acebb65b8694323e04",
-    "url": "/reezalofficial/static/js/2.d4740fdb.chunk.js"
+    "revision": "ca3e6c9f423cfc1acdfc",
+    "url": "/reezalofficial/static/js/2.c7c1f4bf.chunk.js"
   },
   {
     "revision": "bd96a1cfc47c001e68467155960da745",
-    "url": "/reezalofficial/static/js/2.d4740fdb.chunk.js.LICENSE.txt"
+    "url": "/reezalofficial/static/js/2.c7c1f4bf.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ae205c5f69c7cd2750f7",
-    "url": "/reezalofficial/static/js/main.cb7b2ed1.chunk.js"
+    "revision": "a5d4878c52e4e0ffbffc",
+    "url": "/reezalofficial/static/js/main.4d6ecaf0.chunk.js"
   },
   {
     "revision": "10a04f4eb09ad3857eef",
     "url": "/reezalofficial/static/js/runtime-main.87684433.js"
   },
   {
+    "revision": "067f20c78b44e18f3396ac1c02e36deb",
+    "url": "/reezalofficial/static/media/41633967971_ReezalMericanNaina.067f20c7.jpeg"
+  },
+  {
     "revision": "c47341ff37de6155a7a1fd19d707e44c",
     "url": "/reezalofficial/static/media/4D1FD3C1-FCE4-4CE5-89A3-91DEE18A42E7-scaled.c47341ff.jpeg"
+  },
+  {
+    "revision": "61787e71aee9d3c0aaeaec0dd78d71ed",
+    "url": "/reezalofficial/static/media/Astro_Awani.61787e71.png"
   },
   {
     "revision": "2b2eaf0d34ef86a93b81f9892412f1c7",
