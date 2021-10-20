@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.js": "/reezalofficial/static/js/main.cb7b2ed1.chunk.js",
-    "main.js.map": "/reezalofficial/static/js/main.cb7b2ed1.chunk.js.map",
+    "main.js": "/reezalofficial/static/js/main.4d6ecaf0.chunk.js",
+    "main.js.map": "/reezalofficial/static/js/main.4d6ecaf0.chunk.js.map",
     "runtime-main.js": "/reezalofficial/static/js/runtime-main.87684433.js",
     "runtime-main.js.map": "/reezalofficial/static/js/runtime-main.87684433.js.map",
-    "static/js/2.d4740fdb.chunk.js": "/reezalofficial/static/js/2.d4740fdb.chunk.js",
-    "static/js/2.d4740fdb.chunk.js.map": "/reezalofficial/static/js/2.d4740fdb.chunk.js.map",
+    "static/js/2.c7c1f4bf.chunk.js": "/reezalofficial/static/js/2.c7c1f4bf.chunk.js",
+    "static/js/2.c7c1f4bf.chunk.js.map": "/reezalofficial/static/js/2.c7c1f4bf.chunk.js.map",
     "index.html": "/reezalofficial/index.html",
-    "precache-manifest.515d44d454b7fa40bd001d0d82cc5213.js": "/reezalofficial/precache-manifest.515d44d454b7fa40bd001d0d82cc5213.js",
+    "precache-manifest.168b7d0cd3fd493d707614308f400966.js": "/reezalofficial/precache-manifest.168b7d0cd3fd493d707614308f400966.js",
     "service-worker.js": "/reezalofficial/service-worker.js",
-    "static/js/2.d4740fdb.chunk.js.LICENSE.txt": "/reezalofficial/static/js/2.d4740fdb.chunk.js.LICENSE.txt",
+    "static/js/2.c7c1f4bf.chunk.js.LICENSE.txt": "/reezalofficial/static/js/2.c7c1f4bf.chunk.js.LICENSE.txt",
+    "static/media/41633967971_ReezalMericanNaina.jpeg": "/reezalofficial/static/media/41633967971_ReezalMericanNaina.067f20c7.jpeg",
     "static/media/4D1FD3C1-FCE4-4CE5-89A3-91DEE18A42E7-scaled.jpeg": "/reezalofficial/static/media/4D1FD3C1-FCE4-4CE5-89A3-91DEE18A42E7-scaled.c47341ff.jpeg",
+    "static/media/Astro_Awani.png": "/reezalofficial/static/media/Astro_Awani.61787e71.png",
     "static/media/Logo_Utusan_Malaysia_2020.png": "/reezalofficial/static/media/Logo_Utusan_Malaysia_2020.2b2eaf0d.png",
     "static/media/MG_LOGO-300x48-1.png": "/reezalofficial/static/media/MG_LOGO-300x48-1.bb247d37.png",
     "static/media/Screenshot 2021-10-18 at 23.18.36.png": "/reezalofficial/static/media/Screenshot 2021-10-18 at 23.18.36.27fa0243.png",
@@ -48,7 +50,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.87684433.js",
-    "static/js/2.d4740fdb.chunk.js",
-    "static/js/main.cb7b2ed1.chunk.js"
+    "static/js/2.c7c1f4bf.chunk.js",
+    "static/js/main.4d6ecaf0.chunk.js"
   ]
 }
