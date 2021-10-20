@@ -2,7 +2,6 @@ import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
-import BlogHero from "../img/blog-hero.jpg";
 
 import News from "../components/news/news";
 
@@ -16,7 +15,7 @@ const Container = styled.div`
 
 const Hero = styled.div`
   background: linear-gradient(0deg, #ffffff, rgba(255, 255, 255, 0.3)),
-    url(${BlogHero}) top right;
+    url(${require("../img/home/lembahsubang3.jpg")}) bottom center;
   background-size: cover;
   height: 60vh;
   color: #fff;
@@ -127,7 +126,7 @@ const PostSourceImg = styled.img`
   bottom: 10px;
   right: 0px;
 
-  padding: 5px;
+  padding: ${(props) => props.padding};
 
   background-color: #ffffffba;
 
@@ -177,7 +176,7 @@ function Blog() {
                     <ImgWrapper>
                       <Image src={n.img} />
 
-                      <PostSourceImg src={n.sourceImg} width={n.imgWidth} />
+                      <PostSourceImg src={n.sourceImg} width={n.imgWidth} alt={n.title} padding={n.padding}/>
                     </ImgWrapper>
                     <TextWrapper>
                       <PostDetails>

@@ -14,6 +14,8 @@ const News = [
 
         "imgWidth": "100px",
 
+        "padding" : "0",
+
         "source" : "https://www.utusan.com.my/terkini/2021/10/projek-rumah-terbengkalai-selesai-hujung-tahun-ini/"
     },
 
@@ -30,6 +32,8 @@ const News = [
         "sourceImg": require("../../img/news/source/logobernama_00.png"),
 
         "imgWidth": "200px",
+
+        "padding" : "5px",
 
         "source" : "https://www.bernama.com/en/general/news.php?id=2014126"
     },
@@ -64,6 +68,8 @@ const News = [
 
         "imgWidth": "200px",
 
+        "padding" : "5px",
+
         "source" : "https://malaysiagazette.com/2021/10/16/kpkt-kaji-kaedah-golongan-muda-miliki-kediaman-sendiri/"
     },
 
@@ -81,7 +87,28 @@ const News = [
 
         "imgWidth": "100px",
 
+        "padding" : "5px",
+
         "source" : "https://www.theedgemarkets.com/article/nhc-reviewing-public-affordable-housing-issues-says-reezal-merican"
+    },
+
+    {
+
+        "date": new Date('2021-10-12'),
+
+        "img": require("../../img/news/41633967971_ReezalMericanNaina.jpeg"),
+
+        "title": "Kerajaan kaji semula model membolehkan golongan muda beli rumah pada usia awal",
+
+        "desc": "KUALA LUMPUR: Kerajaan bakal mengkaji semula model untuk membolehkan golongan muda memiliki rumah sendiri.",
+
+        "sourceImg": require("../../img/news/source/Astro_Awani.png"),
+
+        "imgWidth": "100px",
+
+        "padding" : "0",
+
+        "source" : "https://www.astroawani.com/berita-malaysia/kerajaan-kaji-semula-model-membolehkan-golongan-muda-beli-rumah-pada-usia-awal-324857"
     },
 
     {
@@ -97,6 +124,8 @@ const News = [
         "sourceImg": require("../../img/news/source/Logo_Utusan_Malaysia_2020.png"),
 
         "imgWidth": "100px",
+
+        "padding" : "0",
 
         "source" : "https://www.utusan.com.my/terkini/2021/10/pembelaan-kes-adib-diteruskan/"
     },
