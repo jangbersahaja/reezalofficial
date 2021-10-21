@@ -1,51 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "03768aef6a2cef0773c2798ae1971167",
+    "revision": "58a5d53579155e2bbba51e3077b330c7",
     "url": "/reezalofficial/index.html"
   },
   {
-    "revision": "ca3e6c9f423cfc1acdfc",
-    "url": "/reezalofficial/static/js/2.c7c1f4bf.chunk.js"
+    "revision": "ceb976537eefe863854b",
+    "url": "/reezalofficial/static/js/2.1519f088.chunk.js"
   },
   {
     "revision": "bd96a1cfc47c001e68467155960da745",
-    "url": "/reezalofficial/static/js/2.c7c1f4bf.chunk.js.LICENSE.txt"
+    "url": "/reezalofficial/static/js/2.1519f088.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a5d4878c52e4e0ffbffc",
-    "url": "/reezalofficial/static/js/main.4d6ecaf0.chunk.js"
+    "revision": "56dd65066018a6fdaf74",
+    "url": "/reezalofficial/static/js/main.0c9ec9e7.chunk.js"
   },
   {
     "revision": "10a04f4eb09ad3857eef",
     "url": "/reezalofficial/static/js/runtime-main.87684433.js"
-  },
-  {
-    "revision": "067f20c78b44e18f3396ac1c02e36deb",
-    "url": "/reezalofficial/static/media/41633967971_ReezalMericanNaina.067f20c7.jpeg"
-  },
-  {
-    "revision": "c47341ff37de6155a7a1fd19d707e44c",
-    "url": "/reezalofficial/static/media/4D1FD3C1-FCE4-4CE5-89A3-91DEE18A42E7-scaled.c47341ff.jpeg"
-  },
-  {
-    "revision": "61787e71aee9d3c0aaeaec0dd78d71ed",
-    "url": "/reezalofficial/static/media/Astro_Awani.61787e71.png"
-  },
-  {
-    "revision": "2b2eaf0d34ef86a93b81f9892412f1c7",
-    "url": "/reezalofficial/static/media/Logo_Utusan_Malaysia_2020.2b2eaf0d.png"
-  },
-  {
-    "revision": "bb247d37704ad46c8114841582ae3e17",
-    "url": "/reezalofficial/static/media/MG_LOGO-300x48-1.bb247d37.png"
-  },
-  {
-    "revision": "27fa02439df213a53b9e3ff24054c765",
-    "url": "/reezalofficial/static/media/Screenshot 2021-10-18 at 23.18.36.27fa0243.png"
-  },
-  {
-    "revision": "6264ff39d48cfdff16b4ab0678f92b34",
-    "url": "/reezalofficial/static/media/WhatsApp-Image-2021-10-17-at-2.01.23-PM-1-new.6264ff39.jpeg"
   },
   {
     "revision": "c056469c44d7cb8b89a7017a69922657",
@@ -82,10 +54,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "44660871247b261a84fb5cd79dc7c282",
     "url": "/reezalofficial/static/media/hero-bg.44660871.jpg"
-  },
-  {
-    "revision": "75c33b7688f9ba0b36ee4c5a808c1d35",
-    "url": "/reezalofficial/static/media/housing-subsidy_20210902171654_123rf_5.75c33b76.webp"
   },
   {
     "revision": "15cc3b73632b05d7d69cbcc5f58ca5ca",
@@ -132,20 +100,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reezalofficial/static/media/logo.8860ce80.png"
   },
   {
-    "revision": "45520a6fc5764eb69c9820d9d19b14c9",
-    "url": "/reezalofficial/static/media/logo_0_0.45520a6f.webp"
-  },
-  {
     "revision": "3166e7073a8b26bd8a9634457a6a7c8e",
     "url": "/reezalofficial/static/media/ppr.3166e707.jpg"
   },
   {
     "revision": "53e6ef2e3227ecccd0233bc189fb47dd",
     "url": "/reezalofficial/static/media/profile.53e6ef2e.png"
-  },
-  {
-    "revision": "84f63efd05aafb460f6980a685747563",
-    "url": "/reezalofficial/static/media/reezal-7.84f63efd.jpeg"
   },
   {
     "revision": "cc0a9810774f9567a7597d29842be252",
@@ -162,9 +122,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0c6b1c000704c8d52432ffdb42613ead",
     "url": "/reezalofficial/static/media/rumah-ikram4.0c6b1c00.jpg"
-  },
-  {
-    "revision": "14d804c42a0a2ef4db3a5e83d1ee9166",
-    "url": "/reezalofficial/static/media/utusan.14d804c4.jpg"
   }
 ]);
