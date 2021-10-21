@@ -63,6 +63,10 @@ const Items = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const PostArticle = styled.div``;
@@ -72,12 +76,12 @@ const PostNews = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  width: 29%;
-  margin: 5px;
-  padding: 15px;
+  width: 32%;
+  margin: 10px 0;
 
   background-color: #fff;
   border-radius: 10px;
+  overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 
   @media (max-width: 992px) {
@@ -96,6 +100,8 @@ const CardEnd = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  margin: 0 15px 10px 15px;
 `;
 
 const ImgWrapper = styled.div`
@@ -110,9 +116,6 @@ const ImgWrapper = styled.div`
   height: 200px;
   width: 100%;
 
-  overflow: hidden;
-  border-radius: 10px;
-
   @media (max-width: 992px) {
     height: 240px;
   }
@@ -124,8 +127,9 @@ const Image = styled.img`
 `;
 
 const TextWrapper = styled.div`
+margin: 5px 15px 0 15px;
   @media (max-width: 992px) {
-    padding: 0 10px;
+    padding: 0 5px;
   }
 `;
 
@@ -133,7 +137,7 @@ const PostVideo = styled.div``;
 
 const PostTitle = styled.h3`
   margin-bottom: 5px;
-  font-size: 16px;
+  font-size: 18px;
 `;
 
 const PostDesc = styled.p`
@@ -198,9 +202,8 @@ const ShowMore = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: 29%;
-  margin: 5px;
-  padding: 15px;
+  width: 32%;
+  margin: 10px 0;
 
   @media (max-width: 992px) {
     width: 44%;

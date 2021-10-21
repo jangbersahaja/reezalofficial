@@ -51,7 +51,7 @@ const LogoName = styled.h1`
 `;
 
 const LogoTitle = styled.i`
-  font-size: 10px;
+  font-size: 11px;
 `;
 
 const Menu = styled.div`
@@ -123,7 +123,7 @@ const Navbar = () => {
           <LogoNameWrapper>
             <LogoName>Reezal Merican</LogoName>
             <LogoTitle>
-              Minister of Housing and Local Government Malaysia
+              Menteri Perumahan dan Kerajaan Tempatan
             </LogoTitle>
           </LogoNameWrapper>
         </Logo>

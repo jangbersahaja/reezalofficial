@@ -10,7 +10,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   width: 80vw;
-  padding: 30px 0;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,7 +89,7 @@ const FormWrapper = styled.div`
   padding: 50px;
   display: flex;
   flex-direction: column;
-  background-color: #37517e;
+  background-color: #2c4964;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
 `;
 
@@ -151,14 +151,12 @@ const Contact = () => {
         <Column>
           <Text>
             <Desc>
-              <Title>Have a message to share with Reezal Merican?</Title>
+              <Title>Share your thoughts with Reezal Merican now...</Title>
               <ItemTitle>Address.</ItemTitle>
               <PostText>
                 Kementerian Perumahan dan {"\n"}Kerajaan Tempatan{"\n"}Aras 18, No. 51,
                 Persiaran Perdana, {"\n"}Presint 4, 62100 Putrajaya
               </PostText>
-              <ItemTitle>Phone Number.</ItemTitle>
-              <PostText>01-234 5678</PostText>
               <ItemTitle>Email.</ItemTitle>
               <PostText>admin@reezalmericanofficial.com</PostText>
             </Desc>

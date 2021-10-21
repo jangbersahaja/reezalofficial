@@ -77,7 +77,7 @@ const TextWrapper = styled.div`
 
 const Title = styled.h2`
   font-family: "Playfair Display", serif;
-  font-size: 60px;
+  font-size: 48px;
   font-weight: bold;
   line-height: 1;
   text-transform: uppercase;
@@ -106,7 +106,7 @@ function About() {
             <Image />
           </ImgWrapper>
           <TextWrapper>
-            <Title>About Me</Title>
+            <Title>About <br/> Reezal Merican</Title>
             <Text>
               Politician, Member of Parliament for Kepala Batas, and serves the
               Malaysian Government. Reezal Merican Naina Merican is the current
