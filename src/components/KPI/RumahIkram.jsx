@@ -293,6 +293,7 @@ const RumahIkram = () => {
               <a
                 href="https://teduh.kpkt.gov.my/scheme/rumah-ikram-keluarga-malaysia"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Image src={require("../../img/home/logo-ikram.png")} />
               </a>
@@ -301,6 +302,7 @@ const RumahIkram = () => {
               <a
                 href="https://teduh.kpkt.gov.my/scheme/rumah-ikram-keluarga-malaysia"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Title>Pautan Permohonan</Title>
                 <Span>https://teduh.kpkt.gov.my/</Span>

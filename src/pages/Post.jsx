@@ -194,7 +194,7 @@ const LineBreak = styled.hr`
   border-top: 0.8px solid rgba(0, 0, 0, 0.1);
 `;
 
-function SinglePost() {
+function Post() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const post = Articles.filter((e) => e.id === path);
@@ -202,16 +202,15 @@ function SinglePost() {
   return (
     <div>
       <Navbar />
-      <Container>
-        <BackBtn to="/blog">
-          <ArrowBackIcon />
-        </BackBtn>
-        <HomeBtn to="/">
-          <HomeIcon />
-        </HomeBtn>
-        {post.map((p) => {
-          return (
-            <>
+      {post.map((p, i) => {
+        return (
+            <Container key={i} >
+              <BackBtn to="/blog">
+                <ArrowBackIcon />
+              </BackBtn>
+              <HomeBtn to="/">
+                <HomeIcon />
+              </HomeBtn>
               <Hero bg={p.img}>
                 <TitleWrapper>
                   <SectionTitle>{p.title}</SectionTitle>
@@ -238,13 +237,12 @@ function SinglePost() {
                   </Paper>
                 </Posts>
               </Wrapper>
-            </>
-          );
-        })}
-      </Container>
+            </Container>
+        );
+      })}
       <Footer />
     </div>
   );
 }
 
-export default SinglePost;
+export default Post;

@@ -50,8 +50,9 @@ const LogoName = styled.h1`
   text-transform: uppercase;
 `;
 
-const LogoTitle = styled.i`
+const LogoTitle = styled.span`
   font-size: 11px;
+  letter-spacing: 0.1px;
 `;
 
 const Menu = styled.div`
@@ -97,15 +98,14 @@ const MenuLink = styled(Link)`
 
 const Contact = styled(Link)`
   font-size: 14px;
-  background-color: #fff;
+  color: #fff;
+  background: #d43076;
   transition: all 0.3s ease-in;
-  border: 2px solid #d43076;
   border-radius: 20px;
   margin-left: 50px;
   padding: 5px 10px;
   &:hover {
-    background-color: #d43076;
-    color: white;
+    background-color: #ce3276;
   }
 
   @media (max-width: 992px) {

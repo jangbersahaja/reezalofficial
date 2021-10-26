@@ -25,13 +25,26 @@ const Wrapper = styled.div`
   }
 `;
 
+const TitleWrapper = styled.div`
+  margin: 50px 0;
+`;
+
+const SectionTitleTop = styled.h3`
+  font-family: sans-serif;
+  line-height: 0;
+  letter-spacing: 8px;
+  text-align: center;
+  color: #d43076;
+  text-transform: uppercase;
+`;
+
 const SectionTitle = styled.h1`
   font-family: "Playfair Display", serif;
   font-size: 60px;
   font-weight: bold;
   line-height: 1;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  margin: 50px 0;
   color: #37517e;
   text-align: center;
   border-bottom: 7px solid #d43076;
@@ -65,22 +78,23 @@ const VideoPlayer = styled(ReactPlayer)`
   left: 0;
 `;
 
-
-
 const Video = () => {
   return (
     <Container>
       <Wrapper>
-        <SectionTitle>Featured Video</SectionTitle>
+        <TitleWrapper>
+          <SectionTitleTop>Featured</SectionTitleTop>
+          <SectionTitle>Video</SectionTitle>
+        </TitleWrapper>
         <Gallery>
           <VideoWrapper>
             <VideoPlayer
-            url={[
-              'https://www.youtube.com/watch?v=o0G8Hbja8AQ&t=1s',
-              'https://www.youtube.com/watch?v=IoBwCifLNew&t=1s',
-              'https://www.youtube.com/watch?v=F1w8LUTX2SY',
-              'https://www.youtube.com/watch?v=fIoAdufQbZI&t=21s'
-            ]}
+              url={[
+                "https://www.youtube.com/watch?v=o0G8Hbja8AQ&t=1s",
+                "https://www.youtube.com/watch?v=IoBwCifLNew&t=1s",
+                "https://www.youtube.com/watch?v=F1w8LUTX2SY",
+                "https://www.youtube.com/watch?v=fIoAdufQbZI&t=21s",
+              ]}
               width="100%"
               height="100%"
               controls

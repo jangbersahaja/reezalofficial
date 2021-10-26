@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import News from "../components/news/news";
 import MediaHouse from "../components/news/mediahouse";
+import ReactPlayer from "react-player";
 
 const Container = styled.div`
   background-color: rgba(44, 73, 100, 1);
@@ -15,9 +16,13 @@ const Container = styled.div`
 `;
 
 const Hero = styled.div`
-  background: linear-gradient(0deg,rgba(44, 73, 100, 1),
-      rgba(255, 255, 255, 0.3)),
-    url("https://drive.google.com/uc?id=1QGhSm3OvY2IgGta9ipxdMpfJdumUcz54") center center;
+  background: linear-gradient(
+      0deg,
+      rgba(44, 73, 100, 1),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("https://drive.google.com/uc?id=1QGhSm3OvY2IgGta9ipxdMpfJdumUcz54")
+      center center;
   background-size: cover;
   height: 70vh;
   color: #fff;
@@ -44,6 +49,7 @@ const Section = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
 `;
 
 const SectionTitle = styled.h1`
@@ -52,24 +58,24 @@ const SectionTitle = styled.h1`
   font-weight: bold;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin: 30px 0;
   color: #fff;
   text-align: center;
 `;
 
-const Span = styled.span``;
 
 const Items = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 
   @media (max-width: 768px) {
     justify-content: center;
   }
 `;
 
-const PostArticle = styled.div``;
+
+//NEWS SECTION
 
 const PostNews = styled.div`
   display: flex;
@@ -85,7 +91,26 @@ const PostNews = styled.div`
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 
   @media (max-width: 992px) {
-    width: 44%;
+    width: 48%;
+  }
+
+  @media (max-width: 768px) {
+    width: 95%;
+    margin: 10px 0;
+  }
+`;
+
+const ShowMoreNews = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 32%;
+  margin: 10px 0;
+
+  @media (max-width: 992px) {
+    width: 48%;
   }
 
   @media (max-width: 768px) {
@@ -127,13 +152,11 @@ const Image = styled.img`
 `;
 
 const TextWrapper = styled.div`
-margin: 5px 15px 0 15px;
+  margin: 5px 15px 0 15px;
   @media (max-width: 992px) {
     padding: 0 5px;
   }
 `;
-
-const PostVideo = styled.div``;
 
 const PostTitle = styled.h3`
   margin-bottom: 5px;
@@ -164,7 +187,6 @@ const PostDate = styled.span`
   margin: auto 0;
 `;
 
-const PostSourceWrapper = styled.div``;
 
 const PostSourceImg = styled.img`
   position: absolute;
@@ -176,13 +198,8 @@ const PostSourceImg = styled.img`
   background-color: ${(props) => props.bg};
 `;
 
-const PostType = styled.span`
-  font-size: 12px;
-`;
 
-const PostTags = styled.div``;
 
-const Tags = styled.span``;
 
 const ReadMore = styled.a`
   text-align: center;
@@ -193,25 +210,6 @@ const ReadMore = styled.a`
   font-weight: 900;
   &:hover {
     color: #d43076;
-  }
-`;
-
-const ShowMore = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  width: 32%;
-  margin: 10px 0;
-
-  @media (max-width: 992px) {
-    width: 44%;
-  }
-
-  @media (max-width: 768px) {
-    width: 95%;
-    margin: 10px 0;
   }
 `;
 
@@ -239,6 +237,51 @@ const ShowMoreButton = styled.button`
   }
 `;
 
+//PARLIAMENT SECTION
+
+const PostVideo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 48%;
+  margin: 10px 0;
+
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+
+  @media (max-width: 768px) {
+    width: 95%;
+    margin: 10px 0;
+  }
+`;
+
+const VideoWrapper = styled.div`
+  position: relative;
+  padding-top: 56.25%;
+
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.2);
+`;
+
+const VideoPlayer = styled(ReactPlayer)`
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
+
+const VideoTitle = styled.h3`
+  margin-bottom: 15px;
+  font-size: 18px;
+`;
+
+const VideoDate = styled.span`
+  font-size: 12px;
+  margin: auto 0;
+`;
+
+
 const LineBreak = styled.hr`
   margin: 10px 0;
   border: 0;
@@ -246,14 +289,100 @@ const LineBreak = styled.hr`
   border-top: 0.8px solid rgba(0, 0, 0, 0.1);
 `;
 
-function Blog() {
-  const sortedNews = News.sort((a, b) => b.date - a.date);
-
+const Media = () => {
   const [visible, setVisible] = useState(5);
+
+  const sortedNews = News.sort((a, b) => b.date - a.date)
+    .slice(0, visible)
+    .map((n) => {
+      return (
+        <PostNews key={n.id}>
+          <CardContent>
+            <ImgWrapper>
+              <Image src={n.img} alt={n.title} />
+              {MediaHouse.filter((m) => m.name === n.media).map((m) => {
+                return (
+                  <PostSourceImg
+                    key={m.id}
+                    src={m.img}
+                    width={m.width}
+                    padding={m.padding}
+                    bg={m.background}
+                  />
+                );
+              })}
+            </ImgWrapper>
+            <TextWrapper>
+              <PostDetails>
+                <PostDate>{n.date.toDateString()}</PostDate>
+              </PostDetails>
+              <PostTitle>{n.title}</PostTitle>
+              <LineBreak />
+              <PostDesc>{n.desc}</PostDesc>
+            </TextWrapper>
+          </CardContent>
+          <CardEnd>
+            <LineBreak />
+            <ReadMore href={n.source} target="_blank" rel="noopener noreferrer">
+              Click to read
+            </ReadMore>
+          </CardEnd>
+        </PostNews>
+      );
+    });
 
   const showMoreItems = () => {
     setVisible((prevValue) => prevValue + 3);
   };
+
+  const parliamentVideo = [
+    {
+      title: "Penggulungan Rancangan Malaysia Ke-14 bagi KPKT",
+      source: "https://www.youtube.com/watch?v=B-SWtMmcx2g",
+      date: new Date("2021-10-07"),
+    },
+    {
+      title: "Waktu Pertanyaan Menteri",
+      source: "https://youtu.be/Tx4gN2Bn-HM",
+      date: new Date("2021-10-06"),
+    },
+    {
+      title: "Sesi Jawab Lisan",
+      source: "https://youtu.be/F1w8LUTX2SY",
+      date: new Date("2021-09-22"),
+    },
+    {
+      title: "Sesi Jawab Lisan",
+      source: "https://youtu.be/IQvoHrDHSaI",
+      date: new Date("2021-09-22"),
+    },
+  ];
+
+  const sortedParliamentVideo = parliamentVideo
+    .sort((a, b) => b.date - a.date)
+    .map((v, i) => {
+      return (
+        <PostVideo key={i}>
+          <CardContent>
+            <TextWrapper>
+              <PostDetails>
+                <VideoDate>{v.date.toDateString()}</VideoDate>
+              </PostDetails>
+              <VideoTitle>{v.title}</VideoTitle>
+            </TextWrapper>
+            <VideoWrapper>
+              <VideoPlayer
+                url={v.source}
+                width="100%"
+                height="100%"
+                controls
+                light
+              />
+            </VideoWrapper>
+          </CardContent>
+        </PostVideo>
+      );
+    });
 
   return (
     <div>
@@ -263,55 +392,18 @@ function Blog() {
         <Wrapper>
           <Section>
             <SectionTitle>In the News</SectionTitle>
-
             <Items>
-              {sortedNews.slice(0, visible).map((n) => {
-                return (
-                  <PostNews>
-                    <CardContent>
-                      <ImgWrapper>
-                        <Image src={n.img} alt={n.title} />
-                        {MediaHouse.filter((m) => m.name === n.media).map(
-                          (m) => {
-                            return (
-                              <PostSourceImg
-                                src={m.img}
-                                width={m.width}
-                                padding={m.padding}
-                                bg={m.background}
-                              />
-                            );
-                          }
-                        )}
-                      </ImgWrapper>
-                      <TextWrapper>
-                        <PostDetails>
-                          <PostDate>{n.date.toDateString()}</PostDate>
-                        </PostDetails>
-                        <PostTitle>{n.title}</PostTitle>
-
-                        <LineBreak />
-                        <PostDesc>{n.desc}</PostDesc>
-                      </TextWrapper>
-                    </CardContent>
-                    <CardEnd>
-                      <LineBreak />
-                      <ReadMore href={n.source} target="_blank">
-                        Click to read
-                      </ReadMore>
-                    </CardEnd>
-                  </PostNews>
-                );
-              })}
-              <ShowMore>
+              {sortedNews}
+              <ShowMoreNews>
                 <ShowMoreButton onClick={showMoreItems}>
                   Show More
                 </ShowMoreButton>
-              </ShowMore>
+              </ShowMoreNews>
             </Items>
           </Section>
           <Section>
             <SectionTitle>Parliament</SectionTitle>
+            <Items>{sortedParliamentVideo}</Items>
           </Section>
 
           <Section>
@@ -326,6 +418,6 @@ function Blog() {
       <Footer />
     </div>
   );
-}
+};
 
-export default Blog;
+export default Media;

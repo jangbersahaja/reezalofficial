@@ -17,11 +17,24 @@ const Wrapper = styled.div`
 
   width: 1064px;
   max-width: 100%;
-  padding: 30px 0;
+  margin-bottom: 50px;
 
   @media (max-width: 992px) {
     width: 100%;
   }
+`;
+
+const TitleWrapper = styled.div`
+  margin: 50px 0;
+`;
+
+const SectionTitleTop = styled.h3`
+  font-family: sans-serif;
+  line-height: 0.2;
+  letter-spacing: 8px;
+  text-align: center;
+  color: #d43076;
+  text-transform: uppercase;
 `;
 
 const SectionTitle = styled.h1`
@@ -29,8 +42,8 @@ const SectionTitle = styled.h1`
   font-size: 60px;
   font-weight: bold;
   line-height: 1;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  margin: 50px 0;
   color: #37517e;
   text-align: center;
   border-bottom: 7px solid #d43076;
@@ -129,16 +142,6 @@ const PostText = styled.p`
   -webkit-line-clamp: 14;
   -webkit-box-orient: vertical;
 
-  li {
-    display: none;
-  }
-`;
-
-const ButtonDiv = styled.div`
-  display: flex;
-
-  margin: 20px 30px 50px 30px;
-  justify-content: space-between;
 `;
 
 const ReadMore = styled(Link)`
@@ -153,20 +156,6 @@ const ReadMore = styled(Link)`
   }
 `;
 
-const MoreArticle = styled(Link)`
-  text-align: center;
-  font-size: 14px;
-
-  background-color: #d43076;
-  color: white;
-  transition: all 0.3s ease-in;
-  border: 2px solid #d43076;
-  margin-top: 30px;
-  padding: 10px 20px;
-  &:hover {
-    background-color: #b32160;
-  }
-`;
 
 const LineBreak = styled.hr`
   margin: 10px 0;
@@ -177,20 +166,12 @@ const LineBreak = styled.hr`
 
 const Article = () => {
   const featured = "3";
-  const post = Articles.filter((e) => e.id === featured);
-
-  return (
-    <Container>
-      <Wrapper>
-        <SectionTitle>Featured Article</SectionTitle>
-        {post.map((p) => {
+  const post = Articles.filter((e) => e.id === featured).map((p , i) => {
           return (
-            <>
-              <Post>
+              <Post key = {i}>
                 <ImgsWrapper>
                   <Image src={p.img} />
                 </ImgsWrapper>
-
                 <Text>
                   <Desc>
                     <Date>{p.date.toDateString()}</Date>
@@ -209,9 +190,17 @@ const Article = () => {
                   </Desc>
                 </Text>
               </Post>
-            </>
           );
-        })}
+        })
+
+  return (
+    <Container>
+      <Wrapper>
+        <TitleWrapper>
+          <SectionTitleTop>Featured</SectionTitleTop>
+          <SectionTitle>Article</SectionTitle>
+        </TitleWrapper>
+        {post}
       </Wrapper>
     </Container>
   );

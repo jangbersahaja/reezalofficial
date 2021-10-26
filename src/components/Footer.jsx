@@ -1,6 +1,8 @@
-import { Facebook, Instagram, Twitter } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
+
+import {FaFacebook , FaInstagram , FaTwitter , Youtube} from "react-icons/fa"
+
 
 const Wrapper = styled.div`
   padding: 0 5%;
@@ -62,13 +64,13 @@ const Footer = () => {
       <Left>
         <SocialMedia>
           <SocMedIcon  href = "https://www.facebook.com/reezal.merican041" target="_blank">
-            <Facebook />
+            <FaFacebook />
           </SocMedIcon>
           <SocMedIcon href = "https://www.instagram.com/reezal_merican/" target="_blank">
-            <Instagram />
+            <FaInstagram />
           </SocMedIcon>
           <SocMedIcon href = "https://twitter.com/reezal_merican" target="_blank">
-            <Twitter />
+            <FaTwitter />
           </SocMedIcon>
         </SocialMedia>
       </Left>

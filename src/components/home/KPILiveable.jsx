@@ -123,7 +123,7 @@ const KPILiveable = () => {
       <Post>
         <ImgsWrapper>
           <Image
-            src={require("../../img/home/liveable1.jpg")}
+            src="https://lh3.googleusercontent.com/D3NTnKfkZ-GQL8H1M6fTkgAxJbZWn8bWBgHLLYgroPuMmtBReZiO3n_gM2aasRI13nbJXREaBfybWB-A6Gel0L40kAlQWhAFuJsp1ZQCcT0R0uslwBP-TXizQswf6yJ_7AMD7xyOc-k=w2400"
             bg="#5b6f7c79"
             m="-60px"
           />
@@ -175,30 +175,7 @@ const KPILiveable = () => {
             yang sedang dikenal pasti oleh KPKT adalah:
             <br />
             <br />
-            <ul>
-              <li>
-                <strong>
-                  Program Pemilikan Kediaman oleh Golongan Muda @ Own At Young
-                </strong>
-                .
-              </li>
-              <li>
-                <strong>Program Waste to Wealth</strong>.
-              </li>
-              <li>
-                <strong>Program MyBeautiful Keluarga Malaysia</strong>.
-              </li>
-              <li>
-                <strong>Program Peniaga Sejahtera @ KPKT</strong>
-                <strong>.</strong>
-              </li>
-              <li>
-                <strong>Program MOVAK 2.0</strong>&nbsp;
-              </li>
-              <li>
-                <strong>Program Pembangunan Semula Bandar</strong>.
-              </li>
-            </ul>
+            
           </PostText>
           <LineBreak />
           <ReadMore to="">Click to read</ReadMore>

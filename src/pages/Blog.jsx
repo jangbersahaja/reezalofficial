@@ -121,7 +121,7 @@ const Detail = styled.div`
   align-content: center;
 `;
 
-const Category = styled.a`
+const Category = styled.span`
   font-size: 12px;
   font-weight: bold;
   text-align: center;
@@ -192,7 +192,7 @@ const ShowMoreButton = styled.button`
 `;
 
 const LineBreak = styled.hr`
-  margin: 5px 0;
+  margin: 10px 0;
   border: 0;
   height: 0;
   border-top: 0.8px solid rgba(0, 0, 0, 0.1);
@@ -214,10 +214,10 @@ function Blog() {
           <Posts>
             {sortedArticles.map((p) => {
               return (
-                <Link to={`/post/${p.id}`}>
-                  <Post>
+                <Link key={p.id} to={`/post/${p.id}`}>
+                  <Post >
                     <ImgWrapper>
-                      <Image src={p.img} />
+                      <Image  src={p.img} />
                     </ImgWrapper>
                     <TextWrapper>
                       <Detail>

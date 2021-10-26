@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Blog from "./pages/Blog";
 import Home from "./pages/Home";
@@ -14,20 +14,24 @@ import RumahIkram from "./components/KPI/RumahIkram";
 
 const App = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <ScrollToTop smooth />
-      <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/blog" component={Blog} />
-        <Route path="/post" component={Post} />
-        <Route path="/post" component={Post} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={ContactMe} />
-        <Route path="/kepalabatas" component={KepalaBatas} />
-        <Route path="/rumahikram" component={RumahIkram} />
-        <Route path="/media" component={Media} />
-      </Switch> 
-    </BrowserRouter>
+    <React.StrictMode>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <ScrollToTop smooth />
+        <Fragment>
+          <Switch>
+            <Route path="/" component={Home} exact />
+            <Route path="/blog" component={Blog} />
+            <Route path="/post" component={Post} />
+            <Route path="/post" component={Post} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={ContactMe} />
+            <Route path="/kepalabatas" component={KepalaBatas} />
+            <Route path="/rumahikram" component={RumahIkram} />
+            <Route path="/media" component={Media} />
+          </Switch>{" "}
+        </Fragment>
+      </BrowserRouter>
+    </React.StrictMode>
   );
 };
 
