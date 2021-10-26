@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a4cfa18f2842b7cd29295e666f3782e9",
+    "revision": "a271f1a73e6ffaa55e664399e521fa74",
     "url": "/reezalofficial/index.html"
   },
   {
-    "revision": "ceb976537eefe863854b",
-    "url": "/reezalofficial/static/js/2.1519f088.chunk.js"
+    "revision": "a2f3da9def7a1bb5c92a",
+    "url": "/reezalofficial/static/js/2.0e2d8ff7.chunk.js"
   },
   {
-    "revision": "bd96a1cfc47c001e68467155960da745",
-    "url": "/reezalofficial/static/js/2.1519f088.chunk.js.LICENSE.txt"
+    "revision": "b18a256e2759902bef8b6a697d2e213a",
+    "url": "/reezalofficial/static/js/2.0e2d8ff7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f0cc8f4662b362a8a6ba",
-    "url": "/reezalofficial/static/js/main.b57ad111.chunk.js"
+    "revision": "14156cc6605ae2a84207",
+    "url": "/reezalofficial/static/js/main.4529d7ca.chunk.js"
   },
   {
     "revision": "10a04f4eb09ad3857eef",
@@ -78,10 +78,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b1a10ffff08d81f92a34d3b2969be0a3",
     "url": "/reezalofficial/static/media/lembahsubang4.b1a10fff.jpg"
-  },
-  {
-    "revision": "872f3878527eec0e7e8cce80fe26f8cc",
-    "url": "/reezalofficial/static/media/liveable1.872f3878.jpg"
   },
   {
     "revision": "f59b4e3893e7288be897cc6050601659",
