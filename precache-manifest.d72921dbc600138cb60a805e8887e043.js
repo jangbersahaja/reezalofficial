@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a271f1a73e6ffaa55e664399e521fa74",
+    "revision": "fe69d6f321b7dd422b67f5808bf19d26",
     "url": "/reezalofficial/index.html"
   },
   {
-    "revision": "a2f3da9def7a1bb5c92a",
-    "url": "/reezalofficial/static/js/2.0e2d8ff7.chunk.js"
+    "revision": "e0b1145a6702b129834b",
+    "url": "/reezalofficial/static/js/2.e88153f4.chunk.js"
   },
   {
-    "revision": "b18a256e2759902bef8b6a697d2e213a",
-    "url": "/reezalofficial/static/js/2.0e2d8ff7.chunk.js.LICENSE.txt"
+    "revision": "bd96a1cfc47c001e68467155960da745",
+    "url": "/reezalofficial/static/js/2.e88153f4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "14156cc6605ae2a84207",
-    "url": "/reezalofficial/static/js/main.4529d7ca.chunk.js"
+    "revision": "a8e7908c8686ad15019a",
+    "url": "/reezalofficial/static/js/main.d9b9d212.chunk.js"
   },
   {
     "revision": "10a04f4eb09ad3857eef",

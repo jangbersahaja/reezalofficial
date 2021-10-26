@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/reezalofficial/static/js/main.4529d7ca.chunk.js",
-    "main.js.map": "/reezalofficial/static/js/main.4529d7ca.chunk.js.map",
+    "main.js": "/reezalofficial/static/js/main.d9b9d212.chunk.js",
+    "main.js.map": "/reezalofficial/static/js/main.d9b9d212.chunk.js.map",
     "runtime-main.js": "/reezalofficial/static/js/runtime-main.87684433.js",
     "runtime-main.js.map": "/reezalofficial/static/js/runtime-main.87684433.js.map",
-    "static/js/2.0e2d8ff7.chunk.js": "/reezalofficial/static/js/2.0e2d8ff7.chunk.js",
-    "static/js/2.0e2d8ff7.chunk.js.map": "/reezalofficial/static/js/2.0e2d8ff7.chunk.js.map",
+    "static/js/2.e88153f4.chunk.js": "/reezalofficial/static/js/2.e88153f4.chunk.js",
+    "static/js/2.e88153f4.chunk.js.map": "/reezalofficial/static/js/2.e88153f4.chunk.js.map",
     "index.html": "/reezalofficial/index.html",
-    "precache-manifest.695c92305c140b198cd3dae559f50d36.js": "/reezalofficial/precache-manifest.695c92305c140b198cd3dae559f50d36.js",
+    "precache-manifest.d72921dbc600138cb60a805e8887e043.js": "/reezalofficial/precache-manifest.d72921dbc600138cb60a805e8887e043.js",
     "service-worker.js": "/reezalofficial/service-worker.js",
-    "static/js/2.0e2d8ff7.chunk.js.LICENSE.txt": "/reezalofficial/static/js/2.0e2d8ff7.chunk.js.LICENSE.txt",
+    "static/js/2.e88153f4.chunk.js.LICENSE.txt": "/reezalofficial/static/js/2.e88153f4.chunk.js.LICENSE.txt",
     "static/media/about1.jpg": "/reezalofficial/static/media/about1.c056469c.jpg",
     "static/media/about2.jpg": "/reezalofficial/static/media/about2.c1705eb6.jpg",
     "static/media/about3.jpg": "/reezalofficial/static/media/about3.61486d07.jpg",
@@ -38,7 +38,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.87684433.js",
-    "static/js/2.0e2d8ff7.chunk.js",
-    "static/js/main.4529d7ca.chunk.js"
+    "static/js/2.e88153f4.chunk.js",
+    "static/js/main.d9b9d212.chunk.js"
   ]
 }
